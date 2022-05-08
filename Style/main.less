@@ -52,6 +52,7 @@
 body {
     margin: 0;
     padding: 0;
+    overflow: hidden;
 }
 
 
@@ -159,7 +160,7 @@ body {
     user-select: none;
     display: flex;
     line-height: var(--line-height-input);
-    overflow: hidden;
+    // overflow: hidden;
     transition: var(--transition-1);
 
     .tab {
@@ -214,7 +215,9 @@ body {
     }
 
 }
-
+#content-tab2 {
+    display: none;
+}
 //map
 #map {
     position: absolute;

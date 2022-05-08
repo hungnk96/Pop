@@ -11,6 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="/aos.css" />
+    <script src="/aos.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -20,7 +22,7 @@
 <body class="">
     <div id="map"></div>
     <div class="left-menu">
-        <div class="menu-search">
+        <div class="menu-search" data-aos="fade-down" data-aos-delay="100">
             <div class="icon show-in-searching">
                 <svg class="icon-svg" viewBox="0 0 16 16">
                     <path
@@ -57,9 +59,9 @@
                 </svg>
             </div>
         </div>
-        <div class="main-popup active">
+        <div class="main-popup active" data-aos="fade-right" data-aos-delay="150">
             <div class="tab-icon-line">
-                <div class="tab active">
+                <div id="tab1" class="tab active">
                     <div class="line-transperent"></div>
                     <div class="icon">
                         <svg class="icon-svg" viewBox="0 0 16 16">
@@ -73,7 +75,7 @@
                     </div>
                     <div class="line-status"></div>
                 </div>
-                <div class="tab">
+                <div id="tab2" class="tab ">
                     <div class="line-transperent"></div>
                     <div class="icon">
                         <svg class="icon-svg" viewBox="0 0 16 16">
@@ -112,9 +114,15 @@
                     <div class="line-status"></div>
                 </div>
             </div>
+            <div id="content-tab1" class="content-tab">
+                content 1
+            </div>
+            <div id="content-tab2" class="content-tab">
+                content tab 2
+            </div>
         </div>
     </div>
-    <div class="filter">
+    <div class="filter"  data-aos="fade-down" data-aos-delay="250">
         <div class="tab-icon-text icon-toggle active">
             <svg class="icon-svg" viewBox="0 0 16 16">
                 <path
@@ -137,7 +145,7 @@
             <div>WRF</div>
         </div>
     </div>
-    <div class="map-control">
+    <div class="map-control"  data-aos="fade-left" data-aos-delay="600">
         <div class="zoom-control">
             <div class="icon">
                 <svg class="icon-svg" viewBox="0 0 16 16">
@@ -182,14 +190,30 @@
     <div class="time-slider"></div>
     <script src="./main.js"></script>
     <script>
+         AOS.init();
         $(document).ready(function () {
-            $(".icon-toggle,.tab").click(function (e) {
+            $(".icon-toggle").click(function (e) {
                 e.preventDefault();
                 $(this).toggleClass("active");
             });
             $(".toggle-panel").click(function (e) {
                 e.preventDefault();
                 $(".main-popup").toggleClass("active");
+            });
+            $(".tab").click(function (e) {
+                e.preventDefault();
+                $(".tab").removeClass("active");
+                $(this).addClass("active");
+            });
+            $("#tab1").click(function (e) {
+                e.preventDefault();
+                $("#content-tab1").show();
+                $("#content-tab2").hide();
+            });
+            $("#tab2").click(function (e) {
+                e.preventDefault();
+                $("#content-tab2").show();
+                $("#content-tab1").hide();
             });
         });
         $("#search").focus(function () {
@@ -200,6 +224,7 @@
             $(".show-in-searching").removeClass("show-search");
             $(".hide-in-searching").removeClass("hide-search");
         });
+
     </script>
 </body>
 
