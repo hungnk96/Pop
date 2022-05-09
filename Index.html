@@ -11,8 +11,8 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="/aos.css" />
-    <script src="/aos.js"></script>
+    <link rel="stylesheet" href="/library.css" />
+    <script src="/library.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/v2.8.2/mapbox-gl.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"
         integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ=="
@@ -61,7 +61,7 @@
         </div>
         <div class="main-popup active" data-aos="fade-right" data-aos-delay="150">
             <div class="tab-icon-line">
-                <div id="tab1" class="tab active">
+                <div id="tab1" class="tab ">
                     <div class="line-transperent"></div>
                     <div class="icon">
                         <svg class="icon-svg" viewBox="0 0 16 16">
@@ -75,7 +75,7 @@
                     </div>
                     <div class="line-status"></div>
                 </div>
-                <div id="tab2" class="tab ">
+                <div id="tab2" class="tab active">
                     <div class="line-transperent"></div>
                     <div class="icon">
                         <svg class="icon-svg" viewBox="0 0 16 16">
@@ -115,37 +115,407 @@
                 </div>
             </div>
             <div id="content-tab1" class="content-tab">
-                content 1
+                <div class="card-1">
+                    <div class="title">Điểm đang chọn </div>
+                    <div class="discription">
+                        <div>Lấy từ Trung tâm quan trắc miền bắc</div>
+                        <svg class="icon-svg" width="12" height="12" viewBox="0 0 16 16">
+                            <path
+                                d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                        </svg>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="title-tab-expand">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                        </svg>
+                        <span>
+                            Loại dữ liệu
+                        </span>
+                        <div class="tab">
+                            <div class="tab-icon-text icon-toggle active">
+                                <div>Trạm</div>
+                            </div>
+                            <div class="tab-icon-text icon-toggle">
+                                <div>Vệ tinh</div>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <svg class="icon-svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.64645 9.85355C3.45118 9.65829 3.45118 9.34171 3.64645 9.14645L7.64645 5.14645C7.84171 4.95118 8.15829 4.95118 8.35355 5.14645L12.3536 9.14645C12.5488 9.34171 12.5488 9.65829 12.3536 9.85355C12.1583 10.0488 11.8417 10.0488 11.6464 9.85355L8 6.20711L4.35355 9.85355C4.15829 10.0488 3.84171 10.0488 3.64645 9.85355Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-2">
+                        <div class="row-card">
+                            <div class="tab-icon-text">
+                                <div>Chất lượng không khí tốt</div>
+                            </div>
+                            <div class="tab-icon-text">
+                                <svg class="icon-svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                                </svg>
+                                <div>04:00, 29/12/22</div>
+                            </div>
+                        </div>
+                        <div class="row-card">
+                            <div class="ilustrtion">
+                                <svg width="54" height="54" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                                </svg>
+                            </div>
+                            <div class="info-number">
+                                <div class="title">Chỉ số AQI</div>
+                                <div class="number">
+                                    <div>28</div>
+                                </div>
+                            </div>
+                            <div class="info-number">
+                                <div class="title">Chỉ số AQI</div>
+                                <div class="number">
+                                    <div>28</div>
+                                    <div class="unit">mg/m3</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="row-card bg-1">
+                            <div class="tab-icon-text">
+                                <svg class="icon-svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                                </svg>
+                                <div>24 C</div>
+                            </div>
+                            <div class="tab-icon-text">
+                                <svg class="icon-svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                                </svg>
+                                <div>78 %</div>
+                            </div>
+                            <div class="tab-icon-text">
+                                <svg class="icon-svg" viewBox="0 0 16 16">
+                                    <path
+                                        d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                                </svg>
+                                <div>14 km/h</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="title-tab-expand">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                        </svg>
+                        <span class="tab">
+                            Thông tin
+                        </span>
+
+                        <div class="icon">
+                            <svg class="icon-svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.64645 9.85355C3.45118 9.65829 3.45118 9.34171 3.64645 9.14645L7.64645 5.14645C7.84171 4.95118 8.15829 4.95118 8.35355 5.14645L12.3536 9.14645C12.5488 9.34171 12.5488 9.65829 12.3536 9.85355C12.1583 10.0488 11.8417 10.0488 11.6464 9.85355L8 6.20711L4.35355 9.85355C4.15829 10.0488 3.84171 10.0488 3.64645 9.85355Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="card-3 blue-style">
+                        <div class="icon">
+                            <svg class="icon-svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.64645 9.85355C3.45118 9.65829 3.45118 9.34171 3.64645 9.14645L7.64645 5.14645C7.84171 4.95118 8.15829 4.95118 8.35355 5.14645L12.3536 9.14645C12.5488 9.34171 12.5488 9.65829 12.3536 9.85355C12.1583 10.0488 11.8417 10.0488 11.6464 9.85355L8 6.20711L4.35355 9.85355C4.15829 10.0488 3.84171 10.0488 3.64645 9.85355Z" />
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="title-medium">Trạm đo: Xuân Thủy</div>
+                            <div class="discription">Số 144, Xuân Thủy, Phường Dịch Vọng Hậu, Quận Cầu Giấy, Hà Nội
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card-3 green-style">
+                        <div class="icon">
+                            <svg class="icon-svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.64645 9.85355C3.45118 9.65829 3.45118 9.34171 3.64645 9.14645L7.64645 5.14645C7.84171 4.95118 8.15829 4.95118 8.35355 5.14645L12.3536 9.14645C12.5488 9.34171 12.5488 9.65829 12.3536 9.85355C12.1583 10.0488 11.8417 10.0488 11.6464 9.85355L8 6.20711L4.35355 9.85355C4.15829 10.0488 3.84171 10.0488 3.64645 9.85355Z" />
+                            </svg>
+                        </div>
+                        <div class="content">
+                            <div class="title-medium">Khuyến cáo sức khỏe</div>
+                            <div class="discription">Chất lượng không khí đạt tiêu chuẩn và ít gây hại cho sức khỏe
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card-1">
+                    <div class="title-tab-expand">
+                        <svg viewBox="0 0 16 16">
+                            <path
+                                d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                        </svg>
+                        <span>
+                            Biểu đồ
+                        </span>
+                        <div class="tab">
+                            <div class="tab-icon-text icon-toggle active">
+                                <div>AQI</div>
+                            </div>
+                            <div class="tab-icon-text icon-toggle">
+                                <div>PM 2.5</div>
+                            </div>
+                        </div>
+                        <div class="icon">
+                            <svg class="icon-svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M3.64645 9.85355C3.45118 9.65829 3.45118 9.34171 3.64645 9.14645L7.64645 5.14645C7.84171 4.95118 8.15829 4.95118 8.35355 5.14645L12.3536 9.14645C12.5488 9.34171 12.5488 9.65829 12.3536 9.85355C12.1583 10.0488 11.8417 10.0488 11.6464 9.85355L8 6.20711L4.35355 9.85355C4.15829 10.0488 3.84171 10.0488 3.64645 9.85355Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="chart">
+
+                    </div>
+                </div>
             </div>
             <div id="content-tab2" class="content-tab">
-                content tab 2
+                <div class="card-1 scroll-in-table">
+                    <div class="title">
+                        <div>Bảng xếp hạng</div>
+                        <div class="icon">
+                            <svg class="icon-svg" viewBox="0 0 16 16">
+                                <path
+                                    d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
+                                <path
+                                    d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
+                            </svg>
+                        </div>
+                    </div>
+                    <div class="discription">
+                        <div>Địa điểm đã lưu:</div>
+                    </div>
+                    <div class="pin-location">
+                        <div class="card-5">
+                            <div class="location-name">Hai Phong</div>
+                            <div class="infor">
+                                <div class="no">#21</div>
+                                <div class="aqi-number">AQI: 21</div>
+                            </div>
+                        </div>
+                        <div class="card-5">
+                            <div class="location-name">Nam Dinh</div>
+                            <div class="infor">
+                                <div class="no">#21</div>
+                                <div class="aqi-number">AQI: 21</div>
+                            </div>
+                        </div>
+                        <div class="card-5">
+                            <div class="location-name">Ha Noi</div>
+                            <div class="infor">
+                                <div class="no">#21</div>
+                                <div class="aqi-number">AQI: 21</div>
+                            </div>
+                        </div>
+                        <div class="card-5">
+                            <div class="location-name">Thái Nguyên</div>
+                            <div class="infor">
+                                <div class="no">#21</div>
+                                <div class="aqi-number">AQI: 21</div>
+                            </div>
+                        </div>
+                        <div class="card-5">
+                            <div class="location-name">Thái Nguyên</div>
+                            <div class="infor">
+                                <div class="no">#21</div>
+                                <div class="aqi-number">AQI: 21</div>
+                            </div>
+                        </div>
+                        <div class="card-5">
+                            <div class="location-name">Thái Nguyên</div>
+                            <div class="infor">
+                                <div class="no">#21</div>
+                                <div class="aqi-number">AQI: 21</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="table">
+                        <div class="header-table">
+                            <div class="item col-32">
+                                <div class="">#</div>
+                                <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
+                                    <path
+                                        d="M8.26517 5.26517C8.11872 5.41161 7.88128 5.41161 7.73484 5.26517L6 3.53033L4.26517 5.26517C4.11872 5.41161 3.88128 5.41161 3.73484 5.26517C3.58839 5.11872 3.58839 4.88128 3.73484 4.73483L5.73483 2.73483C5.88128 2.58839 6.11872 2.58839 6.26517 2.73483L8.26517 4.73483C8.41161 4.88128 8.41161 5.11872 8.26517 5.26517Z" />
+                                    <path
+                                        d="M3.73483 6.73483C3.88128 6.58839 4.11872 6.58839 4.26517 6.73483L6 8.46967L7.73483 6.73483C7.88128 6.58839 8.11872 6.58839 8.26516 6.73483C8.41161 6.88128 8.41161 7.11872 8.26516 7.26517L6.26517 9.26517C6.11872 9.41161 5.88128 9.41161 5.73483 9.26517L3.73483 7.26517C3.58839 7.11872 3.58839 6.88128 3.73483 6.73483Z" />
+                                </svg>
+                            </div>
+                            <div class="item flex-1" style="padding-left: var(--padding-C);">
+                                <div>Địa điểm</div>
+                            </div>
+                            <div class="item justify-end col-56">
+                                <div>AQI</div>
+                                <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
+                                    <path
+                                        d="M8.26517 5.26517C8.11872 5.41161 7.88128 5.41161 7.73484 5.26517L6 3.53033L4.26517 5.26517C4.11872 5.41161 3.88128 5.41161 3.73484 5.26517C3.58839 5.11872 3.58839 4.88128 3.73484 4.73483L5.73483 2.73483C5.88128 2.58839 6.11872 2.58839 6.26517 2.73483L8.26517 4.73483C8.41161 4.88128 8.41161 5.11872 8.26517 5.26517Z" />
+                                    <path
+                                        d="M3.73483 6.73483C3.88128 6.58839 4.11872 6.58839 4.26517 6.73483L6 8.46967L7.73483 6.73483C7.88128 6.58839 8.11872 6.58839 8.26516 6.73483C8.41161 6.88128 8.41161 7.11872 8.26516 7.26517L6.26517 9.26517C6.11872 9.41161 5.88128 9.41161 5.73483 9.26517L3.73483 7.26517C3.58839 7.11872 3.58839 6.88128 3.73483 6.73483Z" />
+                                </svg>
+                            </div>
+                            <div class="item justify-end col-56">
+                                <div>24h %</div>
+                            </div>
+                        </div>
+                        <div id="ranking" class="content-table">
+                            <div class="row-table">
+                                <div class="item col-32">21</div>
+                                <div class=" flex-1">
+                                    <div class="icon">
+                                        <svg class="icon-svg" viewBox="0 0 16 16">
+                                            <path
+                                                d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
+                                            <path
+                                                d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
+                                        </svg>
+                                    </div>
+                                    <div>
+                                        TP. Ho Chi Minh
+                                    </div>
+                                </div>
+                                <div class="col-56 item justify-end">
+                                    <div class="tab-icon-text active">
+                                        <div>92</div>
+                                    </div>
+                                </div>
+                                <div class="col-56 item justify-end">
+                                    <svg width="16" height="16" viewBox="0 0 12 12" fill="none">
+                                        <path
+                                            d="M8.26517 5.26517C8.11872 5.41161 7.88128 5.41161 7.73484 5.26517L6 3.53033L4.26517 5.26517C4.11872 5.41161 3.88128 5.41161 3.73484 5.26517C3.58839 5.11872 3.58839 4.88128 3.73484 4.73483L5.73483 2.73483C5.88128 2.58839 6.11872 2.58839 6.26517 2.73483L8.26517 4.73483C8.41161 4.88128 8.41161 5.11872 8.26517 5.26517Z" />
+                                        <path
+                                            d="M3.73483 6.73483C3.88128 6.58839 4.11872 6.58839 4.26517 6.73483L6 8.46967L7.73483 6.73483C7.88128 6.58839 8.11872 6.58839 8.26516 6.73483C8.41161 6.88128 8.41161 7.11872 8.26516 7.26517L6.26517 9.26517C6.11872 9.41161 5.88128 9.41161 5.73483 9.26517L3.73483 7.26517C3.58839 7.11872 3.58839 6.88128 3.73483 6.73483Z" />
+                                    </svg>
+                                    <div>6.1</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="paging">
+                    <div class="icon">
+                        <svg class="icon-svg" viewBox="0 0 16 16">
+                            <path
+                                d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
+                            <path
+                                d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
+                        </svg>
+                    </div>
+                    <div class="number">
+                        <div class="page">
+                            1
+                        </div>
+                        <div class="page">
+                            2
+                        </div>
+                        <div class="page active">
+                            3
+                        </div>
+
+                        <div class="page">
+                            4
+                        </div><div class="page">
+                            5
+                        </div>
+                      
+                    </div>
+                    <div class="icon">
+                        <svg class="icon-svg" viewBox="0 0 16 16">
+                            <path
+                                d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
+                            <path
+                                d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
+                        </svg>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-    <div class="filter"  data-aos="fade-down" data-aos-delay="250">
-        <div class="tab-icon-text icon-toggle active">
+    <div class="filter" data-aos="fade-down" data-aos-delay="250">
+        <div class="tab-icon-text icon-toggle popup-infor-container active">
             <svg class="icon-svg" viewBox="0 0 16 16">
                 <path
                     d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
             </svg>
             <div>Trạm</div>
+            <div class="popup-infor">
+                <svg width="54" height="12" viewBox="0 0 54 12">
+                    <path
+                        d="M16 9C19.485 7.21023 23.2757 3.28215 25.3726 0.916761C26.2266 -0.0466799 27.7734 -0.0466784 28.6274 0.916763C30.7243 3.28215 34.515 7.21023 38 9.00001C43.6551 11.9043 54 12 54 12L-2.27299e-06 12C-2.27299e-06 12 10.3449 11.9043 16 9Z"
+                        fill="white" />
+                </svg>
+                <div class="content">
+                    <svg class="icon-svg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                    </svg>
+                    <div>
+                        <div>Dữ liệu trạm</div>
+                        <div>Lorem Ipsum is simply dummy text of the printing and</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-icon-text icon-toggle active">
+        <div class="tab-icon-text icon-toggle popup-infor-container active">
             <svg class="icon-svg" viewBox="0 0 16 16">
                 <path
                     d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
             </svg>
             <div>Vệ tinh</div>
+            <div class="popup-infor">
+                <svg width="54" height="12" viewBox="0 0 54 12">
+                    <path
+                        d="M16 9C19.485 7.21023 23.2757 3.28215 25.3726 0.916761C26.2266 -0.0466799 27.7734 -0.0466784 28.6274 0.916763C30.7243 3.28215 34.515 7.21023 38 9.00001C43.6551 11.9043 54 12 54 12L-2.27299e-06 12C-2.27299e-06 12 10.3449 11.9043 16 9Z"
+                        fill="white" />
+                </svg>
+                <div class="content">
+                    <svg class="icon-svg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                    </svg>
+                    <div>
+                        <div>Dữ liệu trạm</div>
+                        <div>Lorem Ipsum is simply dummy text of the printing and</div>
+                    </div>
+                </div>
+            </div>
         </div>
-        <div class="tab-icon-text icon-toggle">
+        <div class="tab-icon-text icon-toggle popup-infor-container">
             <svg class="icon-svg" viewBox="0 0 16 16">
                 <path
                     d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
             </svg>
             <div>WRF</div>
+            <div class="popup-infor">
+                <svg width="54" height="12" viewBox="0 0 54 12">
+                    <path
+                        d="M16 9C19.485 7.21023 23.2757 3.28215 25.3726 0.916761C26.2266 -0.0466799 27.7734 -0.0466784 28.6274 0.916763C30.7243 3.28215 34.515 7.21023 38 9.00001C43.6551 11.9043 54 12 54 12L-2.27299e-06 12C-2.27299e-06 12 10.3449 11.9043 16 9Z"
+                        fill="white" />
+                </svg>
+                <div class="content">
+                    <svg class="icon-svg" viewBox="0 0 16 16">
+                        <path
+                            d="M8 3.25C8.41421 3.25 8.75 3.58579 8.75 4V7.25H12C12.4142 7.25 12.75 7.58579 12.75 8C12.75 8.41421 12.4142 8.75 12 8.75H8.75V12C8.75 12.4142 8.41421 12.75 8 12.75C7.58579 12.75 7.25 12.4142 7.25 12V8.75H4C3.58579 8.75 3.25 8.41421 3.25 8C3.25 7.58579 3.58579 7.25 4 7.25H7.25V4C7.25 3.58579 7.58579 3.25 8 3.25Z" />
+                    </svg>
+                    <div>
+                        <div>Dữ liệu trạm</div>
+                        <div>Lorem Ipsum is simply dummy text of the printing and</div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
-    <div class="map-control"  data-aos="fade-left" data-aos-delay="600">
+    <div class="map-control" data-aos="fade-left" data-aos-delay="600">
         <div class="zoom-control">
             <div class="icon">
                 <svg class="icon-svg" viewBox="0 0 16 16">
@@ -190,7 +560,8 @@
     <div class="time-slider"></div>
     <script src="./main.js"></script>
     <script>
-         AOS.init();
+        AOS.init();
+
         $(document).ready(function () {
             $(".icon-toggle").click(function (e) {
                 e.preventDefault();
@@ -215,6 +586,11 @@
                 $("#content-tab2").show();
                 $("#content-tab1").hide();
             });
+            $("#ranking").append($(".row-table").clone());
+            $("#ranking").append($(".row-table").clone());
+            $("#ranking").append($(".row-table").clone());
+            $("#ranking").append($(".row-table").clone());
+            $("#ranking").append($(".row-table").clone());
         });
         $("#search").focus(function () {
             $(".show-in-searching").addClass("show-search");
@@ -224,6 +600,8 @@
             $(".show-in-searching").removeClass("show-search");
             $(".hide-in-searching").removeClass("hide-search");
         });
+
+
 
     </script>
 </body>
