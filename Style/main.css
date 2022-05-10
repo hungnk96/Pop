@@ -450,6 +450,7 @@ body {
   justify-content: start;
 }
 .paging {
+  user-select: none;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -467,14 +468,23 @@ body {
   align-items: center;
   justify-content: center;
   font-size: var(--font-size-10);
-  background-color: var(--gray-100);
-  color: var(--primary-text);
+  background-color: var(--gray-80);
+  color: var(--gray);
   border-radius: var(--border-radius-X);
   margin: 0 var(--margin-C);
 }
 .paging .number .page.active {
   color: var(--white);
   background-color: var(--primary-color);
+}
+.paging .number .page:hover {
+  background-color: var(--primary-color-10) !important;
+  color: var(--primary-color) !important;
+  transition: var(--transition-1);
+}
+.paging .number .page.active {
+  background-color: var(--primary-color);
+  color: var(--white);
 }
 .popup-infor-container:hover .popup-infor {
   display: flex;
@@ -490,11 +500,28 @@ body {
   filter: drop-shadow(var(--box-shadow));
 }
 .popup-infor-container .popup-infor .content {
+  display: flex;
   background-color: var(--white);
   color: var(--primary-text);
   border-radius: var(--border-radius-F);
   padding: var(--padding-F);
   width: var(--width-popup-infor);
+}
+.popup-infor-container .popup-infor .content svg {
+  fill: var(--primary-color);
+  margin-right: var(--margin-H);
+}
+.popup-infor-container .popup-infor .content .title-medium {
+  font-size: 13px;
+  font-weight: 600;
+  margin: var(--margin-C) 0;
+}
+.popup-infor-container .popup-infor .content .discription {
+  font-size: var(--font-size-input);
+  display: flex;
+  align-items: center;
+  line-height: 148%;
+  color: var(--gray);
 }
 .popup-infor-container:hover .popup-infor {
   display: flex;
