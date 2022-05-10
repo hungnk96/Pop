@@ -273,6 +273,10 @@ body {
 .card-1 .title-tab-expand .icon {
   padding: var(--padding-C);
 }
+.card-1 .title-tab-expand .non-interactive {
+  padding: 0;
+  pointer-events: none;
+}
 .card-1 .title-tab-expand svg {
   width: 12px;
   height: 12px;
@@ -320,7 +324,7 @@ body {
 }
 .card-2 .row-card .info-number .number {
   font-size: 30px;
-  font-weight: 400;
+  font-weight: 00;
   display: flex;
   align-items: baseline;
 }
