@@ -205,7 +205,7 @@ body {
 .tab-icon-line .space .icon {
   opacity: 0;
 }
-#content-tab1 {
+#content-tab2 {
   display: none;
 }
 .scroll-in-table {
@@ -216,6 +216,10 @@ body {
 .margin-F {
   min-height: var(--margin-F);
   height: var(--margin-F);
+}
+.margin-H {
+  min-height: var(--margin-H);
+  height: var(--margin-H);
 }
 .content-tab {
   display: flex;
@@ -289,7 +293,7 @@ body {
 }
 .card-1 .title-tab-expand > div .tab-icon-text > div {
   font-size: var(--font-size-10);
-  margin: 0 var(--margin-C);
+  margin: 0 var(--margin-D);
 }
 .card-1 .title-tab-expand .icon {
   padding: var(--padding-C);
@@ -314,7 +318,7 @@ body {
   color: var(--white);
 }
 .card-2 > :nth-child(2) {
-  padding: var(--padding-C) var(--padding-B) !important;
+  padding: var(--padding-B) var(--padding-B) var(--padding-D) var(--padding-B) !important;
 }
 .card-2 .row-card {
   display: flex;
@@ -328,6 +332,10 @@ body {
   pointer-events: none;
   color: var(--white);
   padding: var(--padding-C) 0;
+}
+.card-2 .row-card .tab-icon-text .icon-svg {
+  width: 12px;
+  height: 12px;
 }
 .card-2 .row-card .ilustrtion {
   padding: 0 var(--padding-F);
@@ -360,7 +368,7 @@ body {
   background-color: var(--white-20);
 }
 .card-3 {
-  margin-top: var(--margin-D);
+  margin-top: var(--margin-E);
   display: flex;
   padding: var(--padding-F) var(--padding-E);
   border-radius: var(--border-radius-D);
@@ -710,4 +718,75 @@ body {
 .filter > :last-child,
 .filter > :first-child {
   margin: 0;
+}
+.apexcharts-canvas .apexcharts-text {
+  font-size: 10px;
+  font-weight: 400;
+  fill: var(--gray);
+}
+.apexcharts-canvas .apexcharts-gridline {
+  stroke: #EFEFEF;
+}
+body.dark .apexcharts-canvas .apexcharts-gridline {
+  stroke: #272B30 !important;
+}
+.apexcharts-canvas .apexcharts-xcrosshairs.apexcharts-active,
+.apexcharts-canvas .apexcharts-ycrosshairs.apexcharts-active {
+  stroke: rgba(111, 118, 126, 0.5);
+}
+.apexcharts-canvas .apexcharts-marker {
+  stroke-width: 0;
+}
+.apexcharts-canvas .apexcharts-tooltip {
+  padding: 8px;
+  border-radius: 8px;
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1), 0px 2px 4px rgba(0, 0, 0, 0.1), inset 0px 0px 1px #000000;
+}
+.apexcharts-canvas .apexcharts-tooltip-title {
+  margin-bottom: 8px;
+  padding: 0;
+}
+.apexcharts-canvas .apexcharts-tooltip-series-group {
+  background: none !important;
+  padding: 0 !important;
+}
+.apexcharts-canvas .apexcharts-tooltip-y-group {
+  padding: 0;
+}
+.apexcharts-canvas .apexcharts-tooltip-marker {
+  margin-right: 4px;
+  border-radius: 4px;
+}
+.apexcharts-canvas .apexcharts-tooltip-text {
+  font-weight: 600;
+  color: #FCFCFC;
+}
+.apexcharts-canvas .apexcharts-tooltip.apexcharts-theme-light {
+  border-color: rgba(255, 255, 255, 0.12);
+  background: #272B30;
+}
+.apexcharts-canvas .apexcharts-tooltip.apexcharts-theme-light .apexcharts-tooltip-title {
+  background: none;
+  border: none;
+  color: #EFEFEF;
+}
+.apexcharts-canvas .apexcharts-legend.position-bottom.apexcharts-align-center,
+.apexcharts-canvas .apexcharts-legend.position-top.apexcharts-align-center {
+  justify-content: space-between;
+}
+@media only screen and (max-width: 767px) {
+  .apexcharts-canvas .apexcharts-legend.position-bottom.apexcharts-align-center,
+  .apexcharts-canvas .apexcharts-legend.position-top.apexcharts-align-center {
+    justify-content: center;
+  }
+}
+.apexcharts-canvas .apexcharts-legend-marker {
+  border-radius: 4px !important;
+}
+.apexcharts-canvas .apexcharts-legend-series {
+  margin-top: 6px !important;
+}
+.apexcharts-canvas .apexcharts-legend-text {
+  font-weight: 600 !important;
+  color: #1A1D1F !important;
 }
