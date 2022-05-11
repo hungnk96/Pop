@@ -8,6 +8,7 @@
   --gray-100: #E2E2E2;
   --gray-80: #e7e7e7;
   --gray-50: #f1f1f1;
+  --gray-10: #f4f4f4;
   --air-50: #00AC78;
   --white-20: #ffffff20;
   --color-card-3-1: #E9EFFF;
@@ -31,7 +32,7 @@
   --border-radius-E: 6px;
   --border-radius-F: 8px;
   --border-radius-X: 100px;
-  --border-A: 1px solid var(--gray-80);
+  --border-A: 1px solid var(--gray-50);
   --border-B: 1px solid var(--white-20);
   --white: #fff;
   --padding-A: 2px;
@@ -65,6 +66,21 @@ body {
   padding: 0;
   overflow: hidden;
 }
+::-webkit-scrollbar {
+  background-color: transparent !important;
+  width: 5px !important;
+  height: 5px !important;
+}
+::-webkit-scrollbar-button {
+  display: none !important;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent !important;
+}
+::-webkit-scrollbar-thumb {
+  background-color: var(--gray-300);
+  border-radius: 5px;
+}
 * {
   font-family: 'Roboto', sans-serif;
 }
@@ -72,7 +88,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: var(--padding-E);
+  padding: var(--padding-D);
   border-radius: var(--border-radius-D);
   cursor: pointer;
   transition: var(--transition-1);
@@ -156,7 +172,7 @@ body {
 }
 .tab-icon-line .tab .icon {
   border-radius: 0;
-  padding: var(--padding-F);
+  padding: var(--padding-E);
   background-color: transparent !important;
 }
 .tab-icon-line .tab .line-status {
@@ -233,7 +249,7 @@ body {
 .card-1 .title-medium {
   font-size: 13px;
   font-weight: 600;
-  margin-bottom: var(--margin-F);
+  margin-bottom: var(--margin-D);
 }
 .card-1 .discription {
   font-size: var(--font-size-input);
@@ -287,19 +303,19 @@ body {
 }
 .card-2 {
   background-color: var(--air-50);
-  border-radius: var(--border-radius-F);
-  margin-top: var(--margin-H);
+  border-radius: var(--border-radius-D);
+  margin-top: var(--margin-D);
   fill: var(--white);
   color: var(--white);
 }
 .card-2 > :nth-child(2) {
-  padding: var(--padding-F) var(--padding-B) !important;
+  padding: var(--padding-C) var(--padding-B) !important;
 }
 .card-2 .row-card {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--padding-C) var(--padding-D);
+  padding: var(--padding-A) var(--padding-D);
 }
 .card-2 .row-card .tab-icon-text {
   margin: 0;
@@ -338,28 +354,43 @@ body {
   background-color: var(--white-20);
 }
 .card-3 {
-  margin-top: var(--margin-E);
+  margin-top: var(--margin-D);
   display: flex;
-  padding: var(--padding-H) var(--padding-F);
-  border-radius: var(--border-radius-F);
+  padding: var(--padding-F) var(--padding-E);
+  border-radius: var(--border-radius-D);
 }
 .card-3 .icon {
   border-radius: var(--border-radius-X);
   height: fit-content;
-  margin-right: var(--margin-H);
+  margin-right: var(--margin-F);
 }
 .card-5 {
   background-color: var(--air-50);
   color: var(--white);
-  padding: var(--padding-E);
+  padding: var(--padding-D);
+  cursor: pointer;
 }
 .card-5 .location-name {
+  display: flex;
+  align-items: center;
   font-size: var(--font-size-input);
   font-weight: 600;
-  margin-bottom: var(--margin-D);
+  margin-bottom: var(--margin-C);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+}
+.card-5 .location-name :first-child {
+  flex: 1;
+}
+.card-5 .icon {
+  transform: scale(0);
+  transition: var(--transition-1);
+}
+.card-5 .non-interactive {
+  padding: 0;
+  pointer-events: none;
+  fill: var(--white);
 }
 .card-5 .infor {
   display: flex;
@@ -368,7 +399,11 @@ body {
 .card-5 .aqi-number {
   opacity: 0.6;
   font-size: var(--font-size-10);
-  margin-right: var(--margin-E);
+  margin-right: var(--margin-B);
+}
+.card-5:hover .icon {
+  transform: scale(1);
+  transition: var(--transition-1);
 }
 .blue-style {
   background-color: var(--color-card-3-1);
@@ -386,6 +421,13 @@ body {
   background-color: var(--color-card-3-5);
   color: var(--white);
 }
+.green-style-text {
+  color: var(--air-50);
+}
+.green-bg {
+  background-color: var(--air-50);
+  color: var(--white);
+}
 .table {
   flex: 1;
   display: flex;
@@ -394,7 +436,7 @@ body {
 }
 .table .header-table {
   display: flex;
-  padding: var(--padding-F) 0;
+  padding: var(--padding-F) var(--padding-B);
 }
 .table .item {
   display: flex;
@@ -403,7 +445,7 @@ body {
   color: var(--gray);
   text-transform: uppercase;
   letter-spacing: 1px;
-  font-weight: 500;
+  font-weight: 600;
 }
 .table .item svg {
   fill: currentColor;
@@ -418,7 +460,8 @@ body {
   align-items: center;
   font-size: var(--font-size-input);
   border-top: var(--border-A);
-  padding: var(--padding-C) 0;
+  padding: var(--padding-B);
+  font-weight: 500;
 }
 .table .row-table > div {
   display: flex;
@@ -427,10 +470,19 @@ body {
 .table .row-table > div .icon {
   padding: var(--padding-C);
 }
+.table .row-table > div .icon.active {
+  color: var(--primary-color);
+  background-color: transparent;
+}
 .table .row-table > div .tab-icon-text {
   padding: var(--padding-B);
   margin: 0;
   width: fit-content;
+  pointer-events: none;
+}
+.table .row-table:hover {
+  background-color: var(--gray-10);
+  transition: var(--transition-1);
 }
 .table .col-24 {
   width: var(--col-24);
@@ -458,7 +510,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--padding-C);
+  padding: var(--padding-B);
 }
 .paging .number {
   display: flex;
@@ -559,17 +611,17 @@ body {
   display: flex;
   flex-direction: column;
   width: var(--left-menu);
-  margin: var(--margin-I);
+  margin: var(--margin-H);
   position: fixed;
   top: 0;
   left: 0;
   z-index: 2;
-  height: calc(100vh - 2*var(--margin-I));
+  height: calc(100vh - 2*var(--margin-H));
 }
 .menu-search {
   display: flex;
   align-items: center;
-  padding: var(--padding-B);
+  padding: var(--padding-A);
   background-color: var(--white);
   border-radius: var(--border-radius-D);
   box-shadow: var(--box-shadow);
@@ -614,7 +666,7 @@ body {
 .map-control {
   display: flex;
   flex-direction: column;
-  margin: var(--margin-I);
+  margin: var(--margin-H);
   position: fixed;
   top: 0;
   right: 0;
@@ -639,15 +691,17 @@ body {
 }
 .filter {
   display: flex;
-  margin: var(--margin-I);
-  padding: var(--padding-C);
-  background-color: var(--white);
+  margin: var(--margin-H);
+  padding: var(--padding-A);
   border-radius: var(--border-radius-X);
   position: fixed;
   top: 0;
-  left: calc(var(--left-menu) + var(--margin-I));
+  left: calc(var(--left-menu) + var(--margin-H));
   z-index: 2;
+}
+.filter > div {
   box-shadow: var(--box-shadow);
+  background-color: var(--white);
 }
 .filter > :last-child,
 .filter > :first-child {
