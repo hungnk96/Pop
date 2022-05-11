@@ -213,6 +213,10 @@ body {
   flex: 1;
   height: calc(100% - 2*var(--padding-F));
 }
+.margin-F {
+  min-height: var(--margin-F);
+  height: var(--margin-F);
+}
 .content-tab {
   display: flex;
   flex-direction: column;
@@ -281,10 +285,11 @@ body {
   margin-right: 0;
 }
 .card-1 .title-tab-expand > div .tab-icon-text {
-  padding: var(--padding-B);
+  padding: var(--padding-A);
 }
 .card-1 .title-tab-expand > div .tab-icon-text > div {
-  font-size: --font-size-10;
+  font-size: var(--font-size-10);
+  margin: 0 var(--margin-C);
 }
 .card-1 .title-tab-expand .icon {
   padding: var(--padding-C);
@@ -315,7 +320,7 @@ body {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: var(--padding-A) var(--padding-D);
+  padding: var(--padding-B) var(--padding-D);
 }
 .card-2 .row-card .tab-icon-text {
   margin: 0;
@@ -335,17 +340,18 @@ body {
   border-left: var(--border-B);
 }
 .card-2 .row-card .info-number .title {
-  font-size: var(--font-size-input);
+  font-size: var(--font-size-10);
   font-weight: 400;
+  opacity: 0.6;
 }
 .card-2 .row-card .info-number .number {
-  font-size: 30px;
+  font-size: 24;
   font-weight: 00;
   display: flex;
   align-items: baseline;
 }
 .card-2 .row-card .info-number .number .unit {
-  font-size: var(--font-size-input);
+  font-size: var(--font-size-10);
   font-weight: 400;
   opacity: 0.6;
   margin-left: var(--margin-C);
@@ -368,7 +374,6 @@ body {
   background-color: var(--air-50);
   color: var(--white);
   padding: var(--padding-D);
-  cursor: pointer;
 }
 .card-5 .location-name {
   display: flex;
@@ -389,7 +394,6 @@ body {
 }
 .card-5 .non-interactive {
   padding: 0;
-  pointer-events: none;
   fill: var(--white);
 }
 .card-5 .infor {

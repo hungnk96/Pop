@@ -277,6 +277,10 @@ body {
 }
 
 //card
+.margin-F {
+    min-height: var(--margin-F);
+    height: var(--margin-F);
+}
 .content-tab {
     display: flex;
     flex-direction: column;
@@ -356,10 +360,11 @@ body {
             }
 
             .tab-icon-text {
-                padding: var(--padding-B);
+                padding: var(--padding-A);
 
                 &>div {
-                    font-size: --font-size-10;
+                    font-size: var(--font-size-10);
+                    margin: 0 var(--margin-C);
                 }
             }
         }
@@ -401,7 +406,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: var(--padding-A) var(--padding-D);
+        padding: var(--padding-B) var(--padding-D);
 
         .tab-icon-text {
             margin: 0;
@@ -424,18 +429,20 @@ body {
             border-left: var(--border-B);
 
             .title {
-                font-size: var(--font-size-input);
+                font-size: var(--font-size-10);
                 font-weight: 400;
+                opacity: 0.6;
+
             }
 
             .number {
-                font-size: 30px;
+                font-size: 24;
                 font-weight: 00;
                 display: flex;
                 align-items: baseline;
 
                 .unit {
-                    font-size: var(--font-size-input);
+                    font-size: var(--font-size-10);
                     font-weight: 400;
                     opacity: 0.6;
                     margin-left: var(--margin-C);
@@ -468,7 +475,6 @@ body {
     background-color: var(--air-50);
     color: var(--white);
     padding: var(--padding-D);
-    cursor: pointer;
 
     .location-name {
         display: flex;
@@ -487,11 +493,9 @@ body {
         transform: scale(0);
         transition: var(--transition-1);
 
-
     }
     .non-interactive {
         padding: 0;
-        pointer-events: none;
         fill: var(--white);
     }
     .infor {
