@@ -698,7 +698,52 @@
             </div>
         </div>
     </div>
-    <div class="time-slider"></div>
+    <div class="time-slider" >
+        <div class="slider-container" >
+            <div class="play-btn">
+                <div class="icon">
+                    <svg class="icon-svg" viewBox="0 0 16 16">
+                        <path xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd" clip-rule="evenodd" d="M3.25 3.76637C3.25 2.40611 4.73395 1.56591 5.90037 2.26576L12.9567 6.49957C14.0896 7.17928 14.0896 8.82109 12.9567 9.5008L5.90037 13.7346C4.73395 14.4345 3.25 13.5943 3.25 12.234V3.76637ZM5.12862 3.552C4.96199 3.45202 4.75 3.57205 4.75 3.76637V12.234C4.75 12.4283 4.96199 12.5483 5.12863 12.4484L12.185 8.21456C12.3468 8.11746 12.3468 7.88291 12.185 7.78581L5.12862 3.552Z"/>
+                    </svg>
+                </div>
+            </div>
+            <div class="slider">
+
+            </div>
+        </div>
+        <div class="note">
+            <div class="note-range">
+                <div class="number">0</div>
+                <div class="color range01"></div>
+                <div class="transperent"></div>
+            </div>
+            <div class="note-range">
+                <div class="transperent"></div>
+                <div class="color range02"></div>
+                <div class="number">50</div>
+            </div>
+            <div class="note-range">
+                <div class="number">100</div>
+                <div class="color range03"></div>
+                <div class="transperent"></div>
+            </div>
+            <div class="note-range">
+                <div class="transperent"></div>
+                <div class="color range04"></div>
+                <div class="number">150</div>
+            </div>
+            <div class="note-range">
+                <div class="number">200</div>
+                <div class="color range05"></div>
+                <div class="transperent"></div>
+            </div>
+            <div class="note-range">
+                <div class="transperent"></div>
+                <div class="color range06"></div>
+                <div class="number ">300</div>
+            </div>
+        </div>
+    </div>
     <script src="./main.js"></script>
     <script>
         AOS.init();
@@ -711,6 +756,7 @@
             $(".toggle-panel").click(function (e) {
                 e.preventDefault();
                 $(".main-popup").toggleClass("active");
+                $(".time-slider").toggleClass("full-width");
             });
             $(".tab").click(function (e) {
                 e.preventDefault();

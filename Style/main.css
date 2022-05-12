@@ -10,6 +10,11 @@
   --gray-50: #f1f1f1;
   --gray-10: #f4f4f4;
   --air-50: #00AC78;
+  --air-100: #FFD05C;
+  --air-150: #F17C00;
+  --air-200: #FF4123;
+  --air-300: #CB29FF;
+  --air-301: #822000;
   --white-20: #ffffff20;
   --color-card-3-1: #E9EFFF;
   --color-card-3-2: #bcc7ff;
@@ -700,6 +705,76 @@ body {
   margin-top: var(--margin-E);
   box-shadow: var(--box-shadow);
   overflow: hidden;
+}
+.time-slider {
+  display: flex;
+  padding: var(--margin-H);
+  background-image: linear-gradient(360deg, #cad2d3, #cad2d300);
+  position: fixed;
+  bottom: 0;
+  left: calc(var(--left-menu) + var(--margin-H));
+  width: calc(100% - var(--left-menu) - 3*var(--margin-H));
+  z-index: 2;
+  transition: var(--transition-1);
+}
+.time-slider .slider-container {
+  display: flex;
+  align-items: center;
+  flex: 1;
+}
+.time-slider .slider-container .play-btn {
+  display: flex;
+  background-color: var(--white);
+  border-radius: var(--border-radius-X);
+  box-shadow: var(--box-shadow);
+  overflow: hidden;
+}
+.time-slider .slider-container .slider {
+  flex: 1;
+}
+.time-slider .note {
+  display: flex;
+  align-items: center;
+}
+.time-slider .note .note-range {
+  display: flex;
+  flex-direction: column;
+  width: var(--col-24);
+  font-size: var(--font-size-10);
+  color: var(--primary-text);
+}
+.time-slider .note .note-range .color {
+  margin: var(--margin-C) 0;
+  height: var(--padding-B);
+  width: 100%;
+}
+.time-slider .note .note-range .number,
+.time-slider .note .note-range .transperent {
+  width: 100%;
+  height: var(--margin-F);
+}
+.time-slider .note .note-range .range01 {
+  background-color: var(--air-50);
+}
+.time-slider .note .note-range .range02 {
+  background-color: var(--air-100);
+}
+.time-slider .note .note-range .range03 {
+  background-color: var(--air-150);
+}
+.time-slider .note .note-range .range04 {
+  background-color: var(--air-200);
+}
+.time-slider .note .note-range .range05 {
+  background-color: var(--air-300);
+}
+.time-slider .note .note-range .range06 {
+  background-color: var(--air-301);
+}
+.full-width {
+  width: calc(100% - 2*var(--margin-H)) !important;
+  transition: var(--transition-1);
+  left: 0;
 }
 .filter {
   display: flex;
