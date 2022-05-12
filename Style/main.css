@@ -229,7 +229,7 @@ body {
 .content-tab {
   display: flex;
   flex-direction: column;
-  overflow: hidden auto;
+  overflow: hidden overlay;
   flex: 1;
 }
 .pin-location {
@@ -469,7 +469,7 @@ body {
   cursor: pointer;
 }
 .table .content-table {
-  overflow: hidden auto;
+  overflow: hidden overlay;
   flex: 1;
 }
 .table .row-table {
