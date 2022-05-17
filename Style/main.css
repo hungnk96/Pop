@@ -359,9 +359,12 @@ body {
 }
 .card-2 .row-card .info-number .number {
   font-size: 24;
-  font-weight: 00;
+  font-weight: 600;
   display: flex;
   align-items: baseline;
+}
+.card-2 .row-card .info-number .number > div {
+  font-family: 'Polar';
 }
 .card-2 .row-card .info-number .number .unit {
   font-size: var(--font-size-10);

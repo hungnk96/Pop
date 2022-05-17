@@ -287,10 +287,12 @@ body {
     min-height: var(--margin-F);
     height: var(--margin-F);
 }
+
 .margin-H {
     min-height: var(--margin-H);
     height: var(--margin-H);
 }
+
 .content-tab {
     display: flex;
     flex-direction: column;
@@ -409,7 +411,7 @@ body {
     color: var(--white);
 
     &>:nth-child(2) {
-        padding: var(--padding-B) var(--padding-B) var(--padding-D) var(--padding-B)  !important;
+        padding: var(--padding-B) var(--padding-B) var(--padding-D) var(--padding-B) !important;
     }
 
     .row-card {
@@ -424,6 +426,7 @@ body {
             pointer-events: none;
             color: var(--white);
             padding: var(--padding-C) 0;
+
             .icon-svg {
                 width: 12px;
                 height: 12px;
@@ -451,9 +454,13 @@ body {
 
             .number {
                 font-size: 24;
-                font-weight: 00;
+                font-weight: 600;
                 display: flex;
                 align-items: baseline;
+
+                &>div {
+                    font-family: 'Polar';
+                }
 
                 .unit {
                     font-size: var(--font-size-10);
@@ -913,6 +920,7 @@ body {
         display: flex;
         align-items: center;
         flex: 1;
+
         .play-btn {
             display: flex;
             background-color: var(--white);
@@ -920,6 +928,7 @@ body {
             box-shadow: var(--box-shadow);
             overflow: hidden;
         }
+
         .slider {
             flex: 1;
         }
@@ -929,36 +938,46 @@ body {
     .note {
         display: flex;
         align-items: center;
+
         .note-range {
             display: flex;
             flex-direction: column;
             width: var(--col-24);
             font-size: var(--font-size-10);
             color: var(--primary-text);
+
             .color {
                 margin: var(--margin-C) 0;
                 height: var(--padding-B);
                 width: 100%;
             }
-            .number,.transperent {
+
+            .number,
+            .transperent {
                 width: 100%;
                 height: var(--margin-F);
             }
+
             .range01 {
                 background-color: var(--air-50);
             }
+
             .range02 {
                 background-color: var(--air-100);
             }
+
             .range03 {
                 background-color: var(--air-150);
             }
+
             .range04 {
                 background-color: var(--air-200);
             }
+
             .range05 {
                 background-color: var(--air-300);
             }
+
             .range06 {
                 background-color: var(--air-301);
             }
@@ -966,11 +985,13 @@ body {
 
     }
 }
+
 .full-width {
     width: calc(100% - 2*var(--margin-H)) !important;
     transition: var(--transition-1);
     left: 0;
 }
+
 //filter
 .filter {
     display: flex;
