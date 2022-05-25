@@ -6,6 +6,7 @@
     --primary-color-hover: #003fb4;
     --gray: #606781;
     --gray-300: #b4b4b4;
+    --gray-200: #d5d5d5;
     --gray-100: #E2E2E2;
     --gray-80: #e7e7e7;
     --gray-50: #f1f1f1;
@@ -39,10 +40,12 @@
     --border-radius-D: 4px;
     --border-radius-E: 6px;
     --border-radius-F: 8px;
+    --border-radius-G: 16px;
     --border-radius-X: 100px;
     //border 
     --border-A: 1px solid var(--gray-50);
     --border-B: 1px solid var(--white-20);
+    --border-C: 1px solid var(--gray-200);
     //background
     --white: #fff;
     //Padding
@@ -69,8 +72,11 @@
     --scale-zoom: scale(0.9);
     //font
     --font-size-input: 12px;
+    --font-size-B: 16px;
+    --font-size-A: 14px;
     --font-size-10: 10px;
     --line-height-input: 16px;
+    --line-height-input-login: 24px;
     //transition 
     --transition: all ease-in 0.2s;
     --transition-1: all ease-in 0.1s;
@@ -908,7 +914,6 @@ body {
 .time-slider {
     display: flex;
     padding: var(--margin-H);
-    background-image: linear-gradient(360deg, #cad2d3, #cad2d300);
     position: fixed;
     bottom: 0;
     left: calc(var(--left-menu) + var(--margin-H));
@@ -992,6 +997,16 @@ body {
     left: 0;
 }
 
+.overlay-bottom {
+    height: 100px;
+    width: calc(100%) !important;
+    background-image: linear-gradient(360deg, #cad2d3, #cad2d300);
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    z-index: 1;
+}
+
 //filter
 .filter {
     display: flex;
@@ -1016,6 +1031,186 @@ body {
         margin: 0;
     }
 
+}
+
+//login 
+.login-container {
+    width: 100vw;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &>div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        width: var(--left-menu);
+
+        &>* {
+            margin-bottom: var(--margin-I);
+        }
+
+        .title-login {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            .title {
+                font-size: 24px;
+                font-weight: 600;
+                margin-bottom: var(--margin-D);
+                display: flex;
+                align-items: center;
+
+                :first-child {
+                    flex: 1;
+                }
+            }
+
+            .discription {
+                font-size: var(--font-size-input);
+                display: flex;
+                align-items: center;
+                line-height: 148%;
+                color: var(--gray);
+            }
+        }
+
+        .tab-login {
+            display: flex;
+
+            .active {
+                background-color: var(--primary-text);
+            }
+        }
+
+        .form-login {
+            width: calc(100% - 2*var(--margin-G));
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .input-submit {
+            width: calc(100%);
+            font-size: var(--font-size-A);
+            background-color: var(--primary-color);
+            color: var(--white);
+            border-radius: var(--border-radius-X);
+            font-weight: 400;
+            line-height: var(--line-height-input-login);
+            border: none;;
+            padding: var(--padding-E);
+            margin: 0;
+            outline: unset;
+            cursor: pointer;
+            &:hover {
+                background-color: var(--primary-color-hover) !important;
+                color: var(--white) !important;
+                transition: var(--transition-1);
+            }
+        
+        }
+        .input-container {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            border: var(--border-C);
+            border-radius: var(--border-radius-G);
+            margin-bottom: var(--margin-I);
+
+            &>div {
+                border-bottom: var(--border-C);
+            }
+
+            &>*:last-child {
+                border: none;
+            }
+        }
+
+        .input {
+            display: flex;
+            align-items: center;
+            padding: var(--padding-H);
+
+            &>div {
+                display: flex;
+                flex-direction: column;
+                flex: 1;
+
+                .input-label {
+                    font-size: var(--font-size-input);
+                    display: flex;
+                    align-items: center;
+                    line-height: 148%;
+                    color: var(--gray);
+                    margin-bottom: var(--margin-B);
+                    user-select: none;
+                }
+
+                input {
+                    flex: 1;
+                    font-size: var(--font-size-B);
+                    font-weight: 400;
+                    line-height: var(--line-height-input-login);
+                    border: none;
+                    padding: 0;
+                    margin: 0;
+                    outline: unset;
+                }
+            }
+
+           
+        }
+
+        .login-information {
+            display: flex;
+            font-size: var(--font-size-input);
+            align-items: center;
+            line-height: 148%;
+            color: var(--gray);
+
+            .link {
+                margin-left: var(--margin-C);
+                color: var(--primary-color);
+            }
+        }
+        .more-option {
+            display: flex;
+            align-items: center;
+            .icon {
+                background-color: var(--gray-100);
+                border-radius: var(--border-radius-X);
+            }
+            &>div {
+                margin-left: var(--margin-F);
+            }
+            &>*:first-child {
+                margin: 0;
+            }
+        }
+        .login-alert {
+            padding: var(--padding-F);
+            width: calc(100% - 2*var(--padding-F));
+            font-size: var(--font-size-input);
+            border-radius: var(--border-radius-X);
+            background-color: #f100000d;
+            border: 1px solid var(--air-200);
+            display: flex;
+            align-items: center;
+            color: var(--air-200);
+            margin-bottom: var(--margin-I);
+            .icon-input {
+                margin-right: var(--margin-F);
+                fill: currentColor;
+            }
+        }
+        .icon-input {
+            width: 16px;
+            height: 16px;
+        }
+    }
 }
 
 //chart
