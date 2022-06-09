@@ -710,7 +710,7 @@ body {
   background-color: var(--white);
   margin-top: var(--margin-G);
   border-radius: var(--border-radius-E);
-  height: calc(var(--icon-svg) + 2*var(--padding-E) + 2px);
+  height: calc(var(--icon-svg) + 2*var(--padding-F) + 2px);
   transition: var(--transition);
   box-shadow: var(--box-shadow);
   overflow: hidden;
