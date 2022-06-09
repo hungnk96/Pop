@@ -70,6 +70,7 @@
     --padding-CF: 8px 16px 8px 8px;
     //margin 
     --margin-I: 32px;
+    --margin-K: 24px;
     --margin-H: 16px;
     --margin-G: 14px;
     --margin-F: 12px;
@@ -244,7 +245,7 @@ body {
 
         .icon {
             border-radius: 0;
-            padding: var(--padding-E);
+            padding: var(--padding-F);
             background-color: transparent !important;
         }
 
@@ -290,7 +291,7 @@ body {
 
 }
 
-#content-tab2 {
+#content-tab1 {
     display: none;
 }
 
@@ -298,7 +299,7 @@ body {
 .scroll-in-table {
     overflow: hidden;
     flex: 1;
-    height: calc(100% - 44px - 1px - 2*var(--padding-F));
+    height: calc(100% - 44px - 1px - 2*var(--padding-G));
 }
 
 //card
@@ -437,7 +438,7 @@ body {
         display: flex;
         align-items: center;
         justify-content: space-between;
-        padding: var(--padding-C) var(--padding-E);
+        padding: var(--padding-B) var(--padding-E);
 
         .tab-icon-text {
             margin: 0;
@@ -518,6 +519,9 @@ body {
         height: fit-content;
         margin-right: var(--margin-H);
     }
+    .content {
+        filter: brightness(0.5);
+    }
 }
 
 .card-5 {
@@ -576,7 +580,7 @@ body {
     &>*:last-child {
         color: var(--air-50);
         background-color: rgba(var(--color-50), 0.2);
-        border: 1px solid rgba(var(--color-50), 0.5);
+        border: 1px solid rgba(var(--color-50), 0.3);
         .icon {
             background-color: rgba(var(--color-50), 0.6);
             color: var(--white);
@@ -619,7 +623,7 @@ body {
     .item {
         display: flex;
         align-items: center;
-        font-size: var(--font-size-10);
+        font-size: var(--font-size-input);
         color: var(--gray);
         text-transform: uppercase;
         letter-spacing: 1px;
@@ -641,7 +645,7 @@ body {
         align-items: center;
         font-size: var(--font-size-input);
         border-top: var(--border-A);
-        padding: var(--padding-B);
+        padding: var(--padding-C);
         font-weight: 500;
 
         &>div {
@@ -772,9 +776,10 @@ body {
             padding: var(--padding-F);
             width: var(--width-popup-infor);
 
-            svg {
-                fill: var(--primary-color);
+            span {
+                color: var(--primary-color);
                 margin-right: var(--margin-H);
+                line-height: 24px;
             }
 
             .title-medium {
@@ -839,12 +844,12 @@ body {
     display: flex;
     flex-direction: column;
     width: var(--left-menu);
-    margin: var(--margin-H);
+    margin: var(--margin-K);
     position: fixed;
     top: 0;
     left: 0;
     z-index: 2;
-    height: calc(100vh - 2*var(--margin-H));
+    height: calc(100vh - 2*var(--margin-K));
 
 }
 
@@ -857,6 +862,9 @@ body {
     border-radius: var(--border-radius-E);
     box-shadow: var(--box-shadow);
 
+    .icon {
+        padding: var(--padding-E);
+    }
     input {
         flex: 1;
         font-size: var(--font-size-input);
@@ -909,7 +917,7 @@ body {
 .map-control {
     display: flex;
     flex-direction: column;
-    margin: var(--margin-H);
+    margin: var(--margin-K);
     position: fixed;
     top: 0;
     right: 0;
@@ -940,11 +948,11 @@ body {
 //time-slider
 .time-slider {
     display: flex;
-    padding: var(--margin-H);
+    padding: var(--margin-K);
     position: fixed;
     bottom: 0;
-    left: calc(var(--left-menu) + var(--margin-H));
-    width: calc(100% - var(--left-menu) - 3*var(--margin-H));
+    left: calc(var(--left-menu) + var(--margin-K));
+    width: calc(100% - var(--left-menu) - 3*var(--margin-K));
     z-index: 2;
     transition: var(--transition-1);
 
@@ -1037,14 +1045,14 @@ body {
 //filter
 .filter {
     display: flex;
-    margin: var(--margin-H);
+    margin: var(--margin-K);
     padding: var(--padding-A);
     // background-color: var(--white);
     border-radius: var(--border-radius-X);
     // overflow: hidden;
     position: fixed;
-    top: 0;
-    left: calc(var(--left-menu) + var(--margin-H));
+    top: var(--padding-B);
+    left: calc(var(--left-menu) + var(--margin-K));
     z-index: 2;
 
     &>div {
@@ -1242,7 +1250,8 @@ body {
 //logo {
 .logo {
     position: fixed;
-    top: var(--padding-G);
+    top: var(--padding-H);
+    padding: var(--padding-C);
     right: calc(4*var(--padding-H));
     z-index: 1;
 }
