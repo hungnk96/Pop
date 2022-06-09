@@ -969,6 +969,12 @@ body {
   width: 16px;
   height: 16px;
 }
+.logo {
+  position: fixed;
+  top: var(--padding-G);
+  right: calc(4*var(--padding-H));
+  z-index: 1;
+}
 .apexcharts-canvas .apexcharts-text {
   font-size: 10px;
   font-weight: 400;
