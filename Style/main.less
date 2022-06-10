@@ -21,7 +21,7 @@
     --color-301: 130, 32, 0;
 
     --air-50: rgb((var(--color-50)));
-    --air-100: rgb(ar(var(--color-100)));
+    --air-100: rgb((var(--color-100)));
     --air-150: rgb((var(--color-150)));
     --air-200: rgb((var(--color-200)));
     --air-300: rgb((var(--color-300)));
@@ -950,42 +950,42 @@ body {
 //time-slider
 .time-slider {
     display: flex;
+    align-items: flex-end;
     padding: var(--margin-K);
     position: fixed;
     bottom: 0;
     left: calc(var(--left-menu) + var(--margin-K));
     width: calc(100% - var(--left-menu) - 3*var(--margin-K));
     z-index: 2;
-    transition: var(--transition);
 
     .slider-container {
         display: flex;
         align-items: center;
         // flex-direction: column;
         flex: 1;
+        margin-right: var(--margin-K);
         padding: var(--padding-H) var(--padding-G);
         background-color: var(--white-50);
         border-radius: var(--border-radius-E);
         backdrop-filter: blur(10px);
+        height: fit-content;
      
-            .play-btn {
-                display: flex;
-                align-items: center;
-                background-color: var(--white);
-                border-radius: var(--border-radius-X);
-                
-                overflow: hidden;
-                width: fit-content;
-                .time-selected {
-                    font-size: var(--font-size-10);
-                    font-weight: 500;
-                }
-                .icon {
-                    padding: var(--padding-D);
-                }
+        .play-btn {
+            display: flex;
+            align-items: center;
+            background-color: var(--white);
+            border-radius: var(--border-radius-X);
+            
+            overflow: hidden;
+            width: fit-content;
+            .time-selected {
+                font-size: var(--font-size-10);
+                font-weight: 500;
             }
-
-
+            .icon {
+                padding: var(--padding-D);
+            }
+        }
         .slider {
             flex: 1;
             height: fit-content;
@@ -1047,55 +1047,39 @@ body {
     }
 
 
-    .note {
-        display: flex;
-        align-items: center;
+    
+}
+.note {
+    display: flex;
+    // margin: var(--margin-K);
+    // position: fixed;
+    // bottom: 0;
+    // right: 0;
+    // z-index: 2;
+    height: 120px;
+    padding: var(--padding-F);
+    background-color: var(--white-50);
+    border-radius: var(--border-radius-E);
+    backdrop-filter: blur(10px);
+    // box-shadow: var(--box-shadow);
 
-        .note-range {
-            display: flex;
-            flex-direction: column;
-            width: var(--col-24);
-            font-size: var(--font-size-10);
-            color: var(--primary-text);
-
-            .color {
-                margin: var(--margin-C) 0;
-                height: var(--padding-B);
-                width: 100%;
-            }
-
-            .number,
-            .transperent {
-                width: 100%;
-                height: var(--margin-F);
-            }
-
-            .range01 {
-                background-color: var(--air-50);
-            }
-
-            .range02 {
-                background-color: var(--air-100);
-            }
-
-            .range03 {
-                background-color: var(--air-150);
-            }
-
-            .range04 {
-                background-color: var(--air-200);
-            }
-
-            .range05 {
-                background-color: var(--air-300);
-            }
-
-            .range06 {
-                background-color: var(--air-301);
-            }
-        }
-
+    .line {
+        width: 4px;
+        height: 100%;
+        background: linear-gradient(to top, var(--air-301), var(--air-300), var(--air-200), var(--air-150), var(--air-100), var(--air-50));
+        margin-right: var(--margin-D);
     }
+    .number {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items:flex-start;
+        color: var(--primary-text);
+        font-size: var(--font-size-10);
+        font-weight: 500;
+        opacity: 0.6;
+    }
+
 }
 
 .full-width {

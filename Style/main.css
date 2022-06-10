@@ -17,7 +17,7 @@
   --color-300: 203, 41, 255;
   --color-301: 130, 32, 0;
   --air-50: rgb(var(--color-50));
-  --air-100: rgb(ar(var(--color-100)));
+  --air-100: rgb(var(--color-100));
   --air-150: rgb(var(--color-150));
   --air-200: rgb(var(--color-200));
   --air-300: rgb(var(--color-300));
@@ -753,22 +753,24 @@ body {
 }
 .time-slider {
   display: flex;
+  align-items: flex-end;
   padding: var(--margin-K);
   position: fixed;
   bottom: 0;
   left: calc(var(--left-menu) + var(--margin-K));
   width: calc(100% - var(--left-menu) - 3*var(--margin-K));
   z-index: 2;
-  transition: var(--transition);
 }
 .time-slider .slider-container {
   display: flex;
   align-items: center;
   flex: 1;
+  margin-right: var(--margin-K);
   padding: var(--padding-H) var(--padding-G);
   background-color: var(--white-50);
   border-radius: var(--border-radius-E);
   backdrop-filter: blur(10px);
+  height: fit-content;
 }
 .time-slider .slider-container .play-btn {
   display: flex;
@@ -843,44 +845,29 @@ body {
   bottom: calc(-100% - var(--padding-G));
   opacity: 0.6;
 }
-.time-slider .note {
+.note {
   display: flex;
-  align-items: center;
+  height: 120px;
+  padding: var(--padding-F);
+  background-color: var(--white-50);
+  border-radius: var(--border-radius-E);
+  backdrop-filter: blur(10px);
 }
-.time-slider .note .note-range {
+.note .line {
+  width: 4px;
+  height: 100%;
+  background: linear-gradient(to top, var(--air-301), var(--air-300), var(--air-200), var(--air-150), var(--air-100), var(--air-50));
+  margin-right: var(--margin-D);
+}
+.note .number {
   display: flex;
   flex-direction: column;
-  width: var(--col-24);
-  font-size: var(--font-size-10);
+  justify-content: space-between;
+  align-items: flex-start;
   color: var(--primary-text);
-}
-.time-slider .note .note-range .color {
-  margin: var(--margin-C) 0;
-  height: var(--padding-B);
-  width: 100%;
-}
-.time-slider .note .note-range .number,
-.time-slider .note .note-range .transperent {
-  width: 100%;
-  height: var(--margin-F);
-}
-.time-slider .note .note-range .range01 {
-  background-color: var(--air-50);
-}
-.time-slider .note .note-range .range02 {
-  background-color: var(--air-100);
-}
-.time-slider .note .note-range .range03 {
-  background-color: var(--air-150);
-}
-.time-slider .note .note-range .range04 {
-  background-color: var(--air-200);
-}
-.time-slider .note .note-range .range05 {
-  background-color: var(--air-300);
-}
-.time-slider .note .note-range .range06 {
-  background-color: var(--air-301);
+  font-size: var(--font-size-10);
+  font-weight: 500;
+  opacity: 0.6;
 }
 .full-width {
   width: calc(100% - 2*var(--margin-K)) !important;

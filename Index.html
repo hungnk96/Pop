@@ -762,9 +762,9 @@
             </div>
         </div>
     </div>
-    <div class="time-slider" >
+    <div class="time-slider" data-aos="fade-up" data-aos-delay="900">
         <div class="slider-container" >
-            <div class="play-btn">
+            <div class="play-btn" onclick="Play()">
                 <div class="icon">
                     <span class="font-icon-play"></span>
                 </div>
@@ -807,46 +807,26 @@
                 </div>
             </div>
             <div class="play-btn">
-                <div class="icon">
+                <div class="icon" onclick="Back()">
                     <span class="font-icon-left"></span>
                 </div>
                 <div class="time-selected">18:30</div>
-                <div class="icon">
+                <div class="icon" onclick="Next()">
                     <span class="font-icon-right"></span>
                 </div>
             </div>
        
         </div>
-        <div class="note" style="display: none;">
-            <div class="note-range">
-                <div class="number">0</div>
-                <div class="color range01"></div>
-                <div class="transperent"></div>
-            </div>
-            <div class="note-range">
-                <div class="transperent"></div>
-                <div class="color range02"></div>
-                <div class="number">50</div>
-            </div>
-            <div class="note-range">
-                <div class="number">100</div>
-                <div class="color range03"></div>
-                <div class="transperent"></div>
-            </div>
-            <div class="note-range">
-                <div class="transperent"></div>
-                <div class="color range04"></div>
-                <div class="number">150</div>
-            </div>
-            <div class="note-range">
-                <div class="number">200</div>
-                <div class="color range05"></div>
-                <div class="transperent"></div>
-            </div>
-            <div class="note-range">
-                <div class="transperent"></div>
-                <div class="color range06"></div>
-                <div class="number ">300</div>
+       
+        <div class="note" data-aos="fade-left" data-aos-delay="900">
+            <div class="line"></div>
+            <div class="number">
+                <div>0</div>
+                <div>50</div>
+                <div>100</div>
+                <div>15</div>
+                <div>200</div>
+                <div>300</div>
             </div>
         </div>
     </div>
@@ -896,7 +876,20 @@
         });
 
         // time-slider 
-
+        const step_time = 10;
+        function Play () {
+            console.log("Play");
+        }
+        function Pause () {
+            console.log("Pause");
+        }
+        function Back () {
+            console.log("Back");
+        }
+        function Next () {
+            console.log("Next");
+        }
+        //end
         var options = {
 
             chart: {
