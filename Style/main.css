@@ -808,7 +808,8 @@ body {
 }
 .time-slider .slider-container .slider .slider-run {
   background: linear-gradient(to right, var(--primary-text), var(--primary-color));
-  width: 200px;
+  width: 100px;
+  transition: var(--transition);
   position: relative;
 }
 .time-slider .slider-container .slider .slider-run .point-drag {
