@@ -27,24 +27,59 @@
         <div class="menu-search" data-aos="fade-down" data-aos-delay="100">
             <div class="icon show-in-searching">
                 <span class="font-icon-search"></span>
-                <!-- <svg class="icon-svg" viewBox="0 0 16 16">
-                    <path
-                        d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
-                    <path
-                        d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
-                </svg> -->
             </div>
-            <div class="icon hide-in-searching">
+            <label for="menu-toggle" class="icon hide-in-searching menu-container">
+                <input type="checkbox" id="menu-toggle" style="display:none;"/>
                 <span class="font-icon-menu"></span>
-                <!-- <svg class="icon-svg" viewBox="0 0 16 16">
-                    <path
-                        d="M2 10.833L14 10.833C14.2733 10.833 14.5 11.0597 14.5 11.333C14.5 11.6063 14.2733 11.833 14 11.833L2 11.833C1.72667 11.833 1.5 11.6063 1.5 11.333C1.5 11.0597 1.72667 10.833 2 10.833Z" />
-                    <path
-                        d="M2 7.5L14 7.5C14.2733 7.5 14.5 7.72667 14.5 8C14.5 8.27333 14.2733 8.5 14 8.5L2 8.5C1.72667 8.5 1.5 8.27333 1.5 8C1.5 7.72667 1.72667 7.5 2 7.5Z" />
-                    <path
-                        d="M2 4.16699L14 4.16699C14.2733 4.16699 14.5 4.39366 14.5 4.66699C14.5 4.94033 14.2733 5.16699 14 5.16699L2 5.16699C1.72667 5.16699 1.5 4.94032 1.5 4.66699C1.5 4.39366 1.72667 4.16699 2 4.16699Z" />
-                </svg> -->
-            </div>
+                <div class="menu-content">
+                    <div>
+                        <div class="title">
+                            Menu
+                        </div>
+                        <select>
+                            <option>Tieng Viet</option>
+                            <option>English</option>
+                        </select>
+                    </div>
+                    <div>
+                        <div class="item-menu active">
+                            <span class="font-icon-menu"></span>
+                            <div>Bản đồ</div>
+                        </div>
+                        <div class="item-menu">
+                            <span class="font-icon-menu"></span>
+                            <div>Phân tích</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-menu">
+                            <span class="font-icon-menu"></span>
+                            <div>Tin tức</div>
+                        </div>
+                        <div class="item-menu">
+                            <span class="font-icon-menu"></span>
+                            <div>Giới thiệu</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="item-menu">
+                            <span class="font-icon-menu"></span>
+                            <div>Cài đặt</div>
+                        </div>
+                        <div class="item-menu">
+                            <span class="font-icon-menu"></span>
+                            <div>Tài khoản</div>
+                        </div>
+                    </div>
+                    <div>
+                        <div class="pop-btn">
+                            <div>Logout</div>
+                        </div>
+                       
+                    </div>
+                   
+                </div>
+            </label>
             <input id="search" placeholder="Tìm kiếm" autocomplete="off">
             <div class="icon hide-in-searching">
                 <span class="font-icon-search"></span>
@@ -768,7 +803,7 @@
             </div>
         </div>
     </div>
-    <div class="time-slider" data-aos="fade-up" data-aos-delay="900">
+    <div class="time-slider">
         <div class="slider-container">
             <div class="play-btn" onclick="Play()">
                 <div class="icon">
