@@ -61,7 +61,7 @@ window.__timeSlider = {
       return 'currentColor';
     });
     cuePoint.style('width', sF(this.current) + 'px');
-    timeLabel.text(new Date(this.current).toISOString());
+    timeLabel.text(new Date(this.current).toLocaleString());
   },
   play: function( delay, timeStep ) {
     console.log("play");

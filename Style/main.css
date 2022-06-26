@@ -923,6 +923,7 @@ select {
   position: absolute;
   right: 0;
   top: -5px;
+  transform: translateX(50%);
 }
 .time-slider .slider-container .slider .slider-run .point-drag .time-label {
     font-size: 10px;
