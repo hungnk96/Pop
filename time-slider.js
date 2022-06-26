@@ -1,4 +1,5 @@
 window.__timeSlider = {
+  callbacks: {},
   timer: null,
   current: 0,
   from: 0,
@@ -6,10 +7,10 @@ window.__timeSlider = {
   nIntervals: 15,
   transformFn: null,
   init: function(elm, from, to, current, nIntervals) {
-    this.current = current;
+    this.current = +current;
     this.nIntervals = nIntervals
-    this.from = from;
-    this.to = to;
+    this.from = +from;
+    this.to = +to;
 
     let p = d3.select(elm);
     let button = p.append("div");
@@ -25,11 +26,15 @@ window.__timeSlider = {
     slider.append('div').attr('class', 'slider-bg');
     let steps = slider.append('div').attr('class', 'slider-step');
     steps.on('click', (evt) => {
-      this.current = this.transformFn.invert(evt.offsetX);
+      this.current = +this.transformFn.invert(evt.offsetX);
       this.update();
     });
     let cuePoint = slider.append('div').attr('class', 'slider-run');
     let timeLabel = cuePoint.append('div').attr('class', 'point-drag').append('div').attr('class', 'time-label');
+    let dragger = d3.drag().on("start", (evt) => {console.log('started', evt)})
+            .on("drag", (evt) => cuePoint.style('width', evt.x))
+            .on("end", evt => console.log("end", evt));
+    cuePoint.select('.point-drag').call(dragger);
     let svg = steps.append('svg').attr('width', steps.node().clientWidth)
                       .attr('height', '20px')
                       .style('overflow', 'visible');
@@ -62,6 +67,9 @@ window.__timeSlider = {
     });
     cuePoint.style('width', sF(this.current) + 'px');
     timeLabel.text(new Date(this.current).toLocaleString());
+    for (let cb of (this.callbacks['update'] || [])) {
+      cb(this.current);
+    }
   },
   play: function( delay, timeStep ) {
     console.log("play");
@@ -90,11 +98,18 @@ window.__timeSlider = {
     clearTimeout(this.timer);
     this.timer = null;
     this.update();
+  },
+  on: function(eventName, fn) {
+    this.callbacks[eventName] = this.callbacks[eventName] || [];
+    this.callbacks[eventName].push(fn);
   }
 }
 document.addEventListener('DOMContentLoaded', function(event) {
   console.log('Time slider');
   let elem = document.querySelector('.slider-container');
   let now = Date.now();
+  __timeSlider.on('update', function(datetime) {
+    console.log("Time slider updated. param= " + datetime);
+  });
   __timeSlider.init(elem, now - 3 * 25 * 60 * 60 * 1000, now + 3 * 25 * 60 * 60 * 1000, now, 15);
 });

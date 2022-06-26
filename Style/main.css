@@ -910,7 +910,7 @@ select {
 .time-slider .slider-container .slider .slider-run {
   background: linear-gradient(to right, var(--primary-text), var(--primary-color));
   width: 100px;
-  transition: var(--transition);
+  /*transition: var(--transition);*/
   position: relative;
   pointer-events: none;
 }
@@ -924,6 +924,8 @@ select {
   right: 0;
   top: -5px;
   transform: translateX(50%);
+  pointer-events: all;
+  cursor: pointer;
 }
 .time-slider .slider-container .slider .slider-run .point-drag .time-label {
     font-size: 10px;
