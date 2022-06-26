@@ -912,6 +912,7 @@ select {
   width: 100px;
   transition: var(--transition);
   position: relative;
+  pointer-events: none;
 }
 .time-slider .slider-container .slider .slider-run .point-drag {
   width: 10px;
@@ -923,6 +924,11 @@ select {
   right: 0;
   top: -5px;
 }
+.time-slider .slider-container .slider .slider-run .point-drag .time-label {
+    font-size: 10px;
+    white-space: nowrap;
+    transform: translate(-50px, -150%);
+} 
 .time-slider .slider-container .slider .slider-step {
   color: var(--primary-text);
   width: 100%;
@@ -930,6 +936,7 @@ select {
   font-weight: 500;
   display: flex;
   justify-content: space-around;
+  cursor: pointer;
 }
 .time-slider .slider-container .slider .slider-step .step {
   height: 100%;
