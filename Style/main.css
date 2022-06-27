@@ -1081,6 +1081,11 @@ select {
 .time-slider .slider-container .slider .slider-step .tick {
   opacity: 0.6;
 }
+.time-slider .slider-container .slider .slider-step svg {
+  position: absolute;
+  left: 0;
+  top: 0;
+}
 .time-slider .slider-container .slider .slider-step .step {
   height: 100%;
   flex: 1;
