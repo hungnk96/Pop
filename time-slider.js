@@ -1,6 +1,7 @@
-const TICK_WIDTH = 14;
-const AXIS_COLOR = 'red';
-const TICK_COLOR = "green";
+const TICK_HEIGHT = 6;
+const TICK_WIDTH = 2;
+const AXIS_COLOR = 'transparent';
+const TICK_COLOR = "white";
 window.__timeSlider = {
   callbacks: {},
   timer: null,
@@ -61,16 +62,18 @@ window.__timeSlider = {
     let sF = d3.scaleTime().domain([this.from, this.to]).range([0, steps.node().clientWidth]);
     this.transformFn = sF;
     let ticks = sF.ticks(this.nIntervals);
-    let axis = d3.axisBottom().scale(sF).tickValues(ticks).tickSize(TICK_WIDTH);
+    let axis = d3.axisBottom().scale(sF).tickValues(ticks).tickSize(TICK_HEIGHT);
     let svg = steps.select('svg');
     svg.append('g').call(axis);
     svg.selectAll('.tick text').attr('fill', function(d) {
       let date = new Date(d);
-      if (date.getHours() === 0) return 'blue'
-      return 'currentColor';
+      if (date.getHours() === 0) return '#000'
+      return '#00000080';
     });
+    svg.selectAll('.tick text').attr('dy', 12);
     svg.selectAll('.domain').attr('stroke', AXIS_COLOR);
     svg.selectAll('.tick line').attr('stroke', TICK_COLOR);
+    svg.selectAll('.tick line').attr('stroke-width', TICK_WIDTH);
     cuePoint.style('width', sF(this.current) + 'px');
     timeLabel.text(new Date(this.current).toLocaleString());
     for (let cb of (this.callbacks['update'] || [])) {

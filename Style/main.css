@@ -1046,8 +1046,7 @@ select {
   background-color: var(--gray-300);
 }
 .time-slider .slider-container .slider .slider-run {
-  background: linear-gradient(to right, var(--primary-text), var(--primary-color));
-  width: 100px;
+  background-color: var(--primary-color);
   position: relative;
   pointer-events: none;
 }

@@ -903,7 +903,12 @@
     <script src="./main.js"></script>
     <script>
         AOS.init();
-
+        $(window).resize(function() {
+            setTimeout(()=>{
+                __timeSlider.update();
+            },100);
+        });
+       
         $(document).ready(function () {
             $(".icon-toggle").click(function (e) {
                 e.preventDefault();
