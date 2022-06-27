@@ -49,7 +49,7 @@ window.__timeSlider = {
       button.attr('class', 'font-icon-play');
     }
     else {
-      button.attr('class', 'font-icon-close');
+      button.attr('class', 'font-icon-pause');
     }
     steps.selectAll('g').remove();
     let cuePoint = slider.select('.slider-run');
