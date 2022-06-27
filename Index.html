@@ -913,7 +913,9 @@
                 e.preventDefault();
                 $(".main-popup").toggleClass("active");
                 $(".time-slider").toggleClass("full-width");
-                __timeSlider.update();
+                setTimeout(()=>{
+                    __timeSlider.update();
+                },100);
             });
             $(".tab").click(function (e) {
                 e.preventDefault();
