@@ -35,6 +35,7 @@ window.__timeSlider = {
             .on("drag", (evt) => cuePoint.style('width', evt.x))
             .on("end", evt => console.log("end", evt));
     cuePoint.select('.point-drag').call(dragger);
+    console.log(steps.node().clientWidth)
     let svg = steps.append('svg').attr('width', steps.node().clientWidth)
                       .attr('height', '20px')
                       .style('overflow', 'visible');
