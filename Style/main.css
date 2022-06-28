@@ -786,6 +786,7 @@ body {
   font-weight: 400;
   padding: var(--padding-E);
   margin: 0 var(--margin-C) var(--margin-E) var(--margin-C);
+  white-space: nowrap;
   cursor: pointer;
 }
 .pop-btn:hover {
@@ -1392,4 +1393,187 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
 .apexcharts-canvas .apexcharts-legend-text {
   font-weight: 600 !important;
   color: #1A1D1F !important;
+}
+.menubar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: var(--padding-F) var(--padding-H);
+  color: var(--white);
+  background-color: var(--primary-text);
+}
+.menubar > div {
+  display: flex;
+}
+.dropdown {
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  background-color: var(--white-20);
+  border-radius: var(--border-radius-D);
+  margin-left: var(--margin-E);
+}
+.dropdown select {
+  background-color: transparent;
+  color: var(--white);
+  padding-left: 0;
+  cursor: pointer;
+}
+.dropdown > span {
+  font-size: var(--font-size-input);
+  margin-left: var(--margin-F);
+  font-weight: 400;
+}
+.dropdown.active {
+  background-color: var(--primary-color);
+}
+.footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--primary-text);
+  padding: calc(3*var(--padding-H));
+  color: var(--white-80);
+  font-size: var(--font-size-A);
+}
+.footer .footer-menu {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-bottom: var(--margin-I);
+  border-bottom: 1px solid var(--white-20);
+}
+.footer .footer-menu > div {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-menu > div .pop-btn {
+  background-color: transparent;
+  margin: 0 0 0 var(--margin-F);
+  font-weight: 400;
+  font-size: var(--font-size-input);
+  color: var(--white-50);
+}
+.footer .footer-menu > div .pop-btn:hover {
+  background-color: var(--white-20);
+}
+.footer .footer-copyright {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: var(--margin-I);
+}
+.footer .footer-copyright > div {
+  display: flex;
+  align-items: center;
+}
+.footer .footer-copyright > div .icon {
+  font-size: 20px;
+  margin-left: var(--margin-F);
+}
+.footer .footer-copyright > div .pop-btn {
+  background-color: transparent;
+  margin: 0 0 0 var(--margin-F);
+  color: var(--white-80);
+  font-weight: 400;
+}
+.footer .footer-copyright > div .pop-btn:hover {
+  background-color: var(--white-20);
+}
+.footer > div {
+  display: flex;
+  flex-direction: column;
+}
+.maxwidth-desktop {
+  width: 1024px;
+  max-width: 1024px;
+}
+.bg-gray {
+  background-color: var(--gray-10);
+}
+.layout-dashboard {
+  display: flex;
+  flex-direction: column;
+  padding: var(--padding-H);
+}
+.layout-dashboard > :first-child {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: var(--margin-H);
+  grid-row-gap: var(--margin-H);
+  margin-bottom: var(--margin-H);
+}
+.layout-dashboard > :last-child {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  grid-template-rows: repeat(2, 200px);
+  gap: var(--margin-H);
+}
+.card-6 {
+  background-color: var(--white);
+  border-radius: var(--border-radius-D);
+  padding: var(--padding-H);
+  display: flex;
+  flex-direction: column;
+  font-size: var(--font-size-A);
+}
+.card-6 > :first-child {
+  margin-bottom: var(--margin-I);
+  text-transform: uppercase;
+  letter-spacing: 1px;
+  font-weight: 500;
+  color: var(--gray);
+}
+.card-6 > :first-child > div > div {
+  font-size: var(--font-size-10);
+}
+.card-6 > div {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.card-6 > div > div {
+  display: flex;
+  align-items: center;
+}
+.card-6 > div > div span {
+  margin-right: var(--margin-E);
+}
+.card-6 .district-info {
+  display: flex;
+  align-items: center;
+}
+.card-6 .district-info .district-number {
+  font-size: 24px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  margin-right: var(--margin-C);
+}
+.card-6 .district-info .district {
+  font-weight: 400;
+  color: var(--gray);
+  font-size: var(--font-size-input);
+  margin-top: var(--margin-C);
+}
+.card-6 .percent-info {
+  font-size: var(--font-size-input);
+}
+.card-6 .percent-info span {
+  color: var(--white);
+  background-color: var(--air-50);
+  padding: var(--padding-A);
+  border-radius: var(--border-radius-X);
+}
+.card-6 .percent-info .percent {
+  margin-right: var(--margin-C);
+  font-weight: bold;
+}
+.card-6 .percent-info .compare-for {
+  color: var(--gray-300);
+  font-weight: 400;
+}
+.card-7 {
+  background-color: var(--white);
+  border-radius: var(--border-radius-D);
+  padding: var(--padding-H);
 }

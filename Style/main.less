@@ -975,6 +975,7 @@ body {
     font-weight: 400;
     padding: var(--padding-E);
     margin: 0 var(--margin-C) var(--margin-E)var(--margin-C);
+    white-space: nowrap;
     cursor: pointer;
     &:hover {
         background-color: var(--primary-color-hover)
@@ -1672,4 +1673,197 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
 .apexcharts-canvas .apexcharts-legend-text {
     font-weight: 600 !important;
     color: #1A1D1F !important;
+}
+
+//menubar
+.menubar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: var(--padding-F) var(--padding-H);
+    color: var(--white);
+    background-color: var(--primary-text);
+    &>div {
+        display: flex;
+    }
+}
+.dropdown {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    background-color: var(--white-20);
+    border-radius: var(--border-radius-D);
+    margin-left: var(--margin-E);
+    select {
+        background-color: transparent;
+        color: var(--white);
+        padding-left: 0;
+        cursor: pointer;
+    }
+    &>span {
+        font-size: var(--font-size-input);
+        margin-left: var(--margin-F);
+        font-weight: 400;
+    }
+    &.active {
+        background-color: var(--primary-color);
+    }
+}
+.footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--primary-text);
+    padding: calc(3*var(--padding-H));
+    color: var(--white-80);
+    font-size: var(--font-size-A);
+
+    .footer-menu {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: var(--margin-I);
+        border-bottom: 1px solid var(--white-20);
+        &>div {
+            display: flex;
+            align-items: center;
+            .pop-btn {
+                background-color: transparent;
+                margin: 0 0 0 var(--margin-F);
+                font-weight: 400;
+                font-size: var(--font-size-input);
+                color: var(--white-50);
+                &:hover {
+                    background-color: var(--white-20);
+                }
+            }
+        }
+    }
+    .footer-copyright {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-top: var(--margin-I);
+        
+        &>div {
+            display: flex;
+            align-items: center;
+            .icon {
+                font-size: 20px;
+                margin-left: var(--margin-F);
+            }
+            .pop-btn {
+                background-color: transparent;
+                margin: 0 0 0 var(--margin-F);
+                color: var(--white-80);
+                font-weight: 400;
+                &:hover {
+                    background-color: var(--white-20);
+                }
+            }
+        }
+    }
+    &>div {
+        display: flex;
+        flex-direction: column;
+    }
+}
+.maxwidth-desktop {
+    width: 1024px;
+    max-width: 1024px;
+}
+.bg-gray {
+    background-color: var(--gray-10);
+}
+.layout-dashboard {
+    display: flex;
+    flex-direction: column;
+    padding: var(--padding-H);
+    &>:first-child{
+        display: grid;
+        grid-template-columns: repeat(4,1fr);
+        grid-column-gap: var(--margin-H);
+        grid-row-gap: var(--margin-H);
+        // filter: drop-shadow(var(--box-shadow));
+        margin-bottom: var(--margin-H);
+    }
+    &>:last-child {
+        display: grid;
+        grid-template-columns: 1fr 3fr;
+        grid-template-rows: repeat(2, 200px);
+        gap: var(--margin-H);
+
+        // filter: drop-shadow(var(--box-shadow));
+
+    }
+}
+.card-6 {
+    background-color: var(--white);
+    border-radius: var(--border-radius-D);
+    padding: var(--padding-H);
+    display: flex;
+    flex-direction: column;
+    font-size: var(--font-size-A);
+    &>:first-child {
+        margin-bottom: var(--margin-I);
+        text-transform: uppercase;
+        letter-spacing: 1px;
+        font-weight: 500;
+        color: var(--gray);
+        &>div>div {
+            font-size: var(--font-size-10);
+
+        }
+    }
+    &>div {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        &>div {
+            display: flex;
+            align-items: center;
+            span {
+                margin-right: var(--margin-E);
+            }
+        }
+    }
+    .district-info {
+        display: flex;
+        align-items: center;
+        .district-number {
+            font-size: 24px;
+            font-weight: 400;
+            letter-spacing: 1px;
+            margin-right: var(--margin-C);
+        }
+        .district {
+            font-weight: 400;
+            color: var(--gray);
+            font-size: var(--font-size-input);
+            margin-top: var(--margin-C);
+        }
+    }
+    .percent-info {
+        font-size: var(--font-size-input);
+        span {
+            color: var(--white);
+            background-color: var(--air-50);
+            padding: var(--padding-A);
+            border-radius: var(--border-radius-X);
+        }
+        .percent {
+            margin-right: var(--margin-C);
+            font-weight: bold;
+        }
+        .compare-for {
+            color: var(--gray-300);
+            font-weight: 400;
+        }
+    }
+}
+.card-7 {
+    background-color: var(--white);
+    border-radius: var(--border-radius-D);
+    padding: var(--padding-H);
+
 }
