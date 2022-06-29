@@ -23,7 +23,6 @@
   --air-200: rgb(var(--color-200));
   --air-300: rgb(var(--color-300));
   --air-301: rgb(var(--color-301));
-  --white-20: #ffffff20;
   --color-card-3-1: #E9EFFF;
   --color-card-3-2: #bcc7ff;
   --color-card-3-3: #000081;
@@ -51,6 +50,7 @@
   --border-C: 1px solid var(--gray-200);
   --white: #fff;
   --white-20: rgba(255, 255, 255, 0.2);
+  --white-30: rgba(255, 255, 255, 0.3);
   --white-50: rgba(255, 255, 255, 0.5);
   --white-80: rgba(255, 255, 255, 0.8);
   --padding-A: 2px;
@@ -1445,6 +1445,14 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
 }
 .dropdown.active {
   background-color: var(--primary-color);
+}
+.dropdown.active:hover {
+  transition: var(--transition);
+  background-color: var(--primary-color-hover);
+}
+.dropdown:hover {
+  transition: var(--transition);
+  background-color: var(--white-30);
 }
 .footer {
   display: flex;
