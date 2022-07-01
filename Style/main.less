@@ -12,6 +12,7 @@
     --gray-80: #e7e7e7;
     --gray-50: #f1f1f1;
     --gray-10: #f4f4f4;
+    --overlay-popup: rgba(0, 0, 0, 0.5);
 
     //air quality
     --color-50: 0, 171, 120;
@@ -590,16 +591,16 @@ body {
             color: var(--white);
         }
     }
-    span {
-        color: var(--air-50);
-        background-color: rgba(var(--color-50), 0.2);
-        border: 1px solid rgba(var(--color-50), 0.3);
-        backdrop-filter: blur(10px);
-        .icon {
-            background-color: rgba(var(--color-50), 0.6);
-            color: var(--white);
-        }
-    }
+    // span {
+    //     color: var(--air-50);
+    //     background-color: rgba(var(--color-50), 0.2);
+    //     border: 1px solid rgba(var(--color-50), 0.3);
+    //     backdrop-filter: blur(10px);
+    //     .icon {
+    //         background-color: rgba(var(--color-50), 0.6);
+    //         color: var(--white);
+    //     }
+    // }
 }
 .gray-style {
     background-color: var(--gray-80);
@@ -862,7 +863,7 @@ body {
     position: fixed;
     top: 0;
     left: 0;
-    z-index: 2;
+    z-index: 3;
     height: calc(100vh - 2*var(--margin-K));
 
 }
@@ -911,6 +912,18 @@ body {
     display: none;
 }
 #menu-toggle:checked ~ .menu-content {
+   display: flex;
+}
+#setting-toggle:not(checked) ~ .popup-setting {
+    display: none;
+}
+#setting-toggle:checked ~ .popup-setting {
+   display: flex;
+}
+#login-toggle:not(checked) ~ .popup-login {
+    display: none;
+}
+#login-toggle:checked ~ .popup-login {
    display: flex;
 }
 
@@ -989,7 +1002,12 @@ body {
     white-space: nowrap;
     cursor: pointer;
     &:hover {
-        background-color: var(--primary-color-hover)
+        background-color: var(--primary-color-hover);
+        transition: var(--transition);
+    }
+    &.inactive {
+        background-color: var(--gray-200);
+        color: var(--primary-text);
     }
 }
 //select
@@ -1409,12 +1427,8 @@ select {
 }
 
 //login 
-.login-container {
-    width: 100vw;
-    height: 100vh;
-    display: flex;
-    align-items: center;
-    justify-content: center;
+.popup-login {
+   
 
     &>div {
         display: flex;
@@ -2001,4 +2015,45 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
     flex-direction: column;
     overflow: hidden overlay;
     height: 100%;
+}
+.popup-overlay {
+    background-color: var(--overlay-popup);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden;
+    position: fixed;
+    top: calc(-1*var(--margin-K));
+    left: calc(-1*var(--margin-K));
+    .popup {
+        width: var(--left-menu);
+        background-color: var(--white);
+        border-radius: var(--border-radius-E);
+        padding: var(--padding-H);
+        display: flex;
+        flex-direction: column;
+        .popup-header {
+            display: flex;
+            align-items: center;
+            font-size: var(--font-size-B);
+            font-weight: bold;
+            span {
+                margin-right: var(--margin-F);
+                font-size: 24px;
+                color: var(--primary-color);
+            }
+        }
+        .popup-footer {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: var(--margin-E);
+            .pop-btn {
+                margin: 0;
+                width: auto;
+            }
+        }
+    }
+    
 }
