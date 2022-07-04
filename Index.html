@@ -66,15 +66,57 @@
                     <div>
                         <label for="setting-toggle" class="item-menu">
                             <input type="checkbox" id="setting-toggle" style="display:none;"/>
-                            <span class="font-icon-setting"></span>
+                            <span class="font-icon-setting1"></span>
                             <div>Cài đặt</div>
                             <div class="popup-overlay popup-setting">
                                 <div class="popup">
                                     <div class="popup-header">
-                                        <span class="font-icon-setting"></span>
+                                        <span class="font-icon-setting1"></span>
                                         <div>Cài đặt</div>
                                     </div>
-                                    <div class="popup-content"></div>
+                                    <div class="popup-content">
+                                        <div class="item-setting active">
+                                            <span class="font-icon-bell"></span>
+                                            <div>
+                                                <div class="item-setting-label">Notification</div>
+                                                <div class="item-setting-discription">Allow system send alert with your email </div>
+                                            </div>
+                                            <label class="switch">
+                                                <input type="checkbox" checked>
+                                                <span class="slider round"></span>
+                                            </label>
+                                        </div>
+                                        <div class="item-setting">
+                                            <div>
+                                                <div class="item-setting-label">Units</div>
+                                                <div class="item-setting-discription">Lorem Ipsum is simply dummy text of the printing  </div>
+                                                <div class="item-setting-select">
+                                                    <div>
+                                                        <span>Temperature</span>
+                                                        <div>
+                                                            <div class="active">C</div>
+                                                            <div>F</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <span>Wind speed</span>
+                                                        <div>
+                                                            <div class="active">km/h</div>
+                                                            <div>m/s</div>
+                                                        </div>
+                                                    </div>
+                                                    <div>
+                                                        <span>Index PM 2.5</span>
+                                                        <div>
+                                                            <div class="active">µg/m³</div>
+                                                            <div></div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                       
+                                    </div>
                                     <div class="popup-footer">
                                         <div class="pop-btn inactive">
                                             <div>Hủy</div>
@@ -88,7 +130,10 @@
                         </label>
                         <div class="item-menu">
                             <span class="font-icon-user"></span>
-                            <div>Tài khoản</div>
+                            <div>
+                                <span>Hungnk</span>
+                                <div>account@gmail.com</div>
+                            </div>
                         </div>
                     </div>
                     <div>
@@ -118,51 +163,25 @@
                                                     <div class="input-label">Email</div>
                                                     <input type="text" placeholder="Email" value="account@gmail.com">
                                                 </div>
-                                                <svg class="icon-input" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
-                                                    <path
-                                                        d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
-                                                </svg>
-                                            </div>
-                                            <div class="input with-label with-icon">
-                                                <div>
-                                                    <div class="input-label">Email</div>
-                                                    <input type="text" placeholder="Email" value="account@gmail.com">
-                                                </div>
-                                                <svg class="icon-input" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
-                                                    <path
-                                                        d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
-                                                </svg>
+                                                <span class="font-icon-mail"></span>
                                             </div>
                                             <div class="input with-label with-icon">
                                                 <div>
                                                     <div class="input-label">Password</div>
                                                     <input type="password" placeholder="Email" value="account@gmail.com">
                                                 </div>
-                                                <svg class="icon-input" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
-                                                    <path
-                                                        d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
-                                                </svg>
+                                                <span class="font-icon-lock"></span>
+
                                             </div>
-                                            <div class="input with-label with-icon">
+                                            <div class="input with-label with-icon check-done">
                                                 <div>
-                                                    <div class="input-label">Password</div>
+                                                    <div class="input-label">Re-Password</div>
                                                     <input type="password" placeholder="Email" value="account@gmail.com">
                                                 </div>
-                                                <svg class="icon-input" viewBox="0 0 16 16">
-                                                    <path
-                                                        d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
-                                                    <path
-                                                        d="M10.9799 10.9795C11.1752 10.7842 11.4918 10.7842 11.687 10.9795L13.687 12.9795C13.8823 13.1747 13.8823 13.4913 13.687 13.6866C13.4918 13.8818 13.1752 13.8818 12.9799 13.6866L10.9799 11.6866C10.7847 11.4913 10.7847 11.1747 10.9799 10.9795Z" />
-                                                </svg>
+                                                <span class="font-icon-done"></span>
                                             </div>
                                         </div>
-                                        <div class="login-alert">
+                                        <div class="login-alert" style="display: none;">
                                             <svg class="icon-input" viewBox="0 0 16 16">
                                                 <path
                                                     d="M7.33333 2.5C4.66396 2.5 2.5 4.66396 2.5 7.33333C2.5 10.0027 4.66396 12.1667 7.33333 12.1667C10.0027 12.1667 12.1667 10.0027 12.1667 7.33333C12.1667 4.66396 10.0027 2.5 7.33333 2.5ZM1.5 7.33333C1.5 4.11167 4.11167 1.5 7.33333 1.5C10.555 1.5 13.1667 4.11167 13.1667 7.33333C13.1667 10.555 10.555 13.1667 7.33333 13.1667C4.11167 13.1667 1.5 10.555 1.5 7.33333Z" />
@@ -174,11 +193,11 @@
                                         <input class="input-submit" type="submit" value="Login now">
                                     </form> 
                                    
-                                    <div class="login-information">
+                                    <div class="login-information" >
                                         <div>Bạn chưa có tài khoản?</div>
                                         <div class="link">Đăng ký ngay</div>
                                     </div>
-                                    <div class="more-option">
+                                    <div class="more-option" style="display: none;">
                                         <div class="icon">
                                             <svg class="icon-svg" viewBox="0 0 16 16">
                                                 <path fill-rule="evenodd" clip-rule="evenodd" d="M15.1665 8.00033C15.1665 4.04699 11.9532 0.833658 7.99984 0.833658C4.04651 0.833657 0.833171 4.04699 0.833171 8.00032C0.83317 11.9537 4.0465 15.167 7.99984 15.167C11.9532 15.167 15.1665 11.9537 15.1665 8.00033ZM14.1665 8.00033C14.1665 11.4003 11.3998 14.167 7.99984 14.167C4.59984 14.167 1.83317 11.4003 1.83317 8.00032C1.83317 4.60032 4.59984 1.83366 7.99984 1.83366C11.3998 1.83366 14.1665 4.60033 14.1665 8.00033Z"></path>
@@ -968,7 +987,7 @@
                         <div class="title">Thông báo</div>
                         <div>
                             <div>Cài đặt</div>
-                            <span class="font-icon-setting"></span>
+                            <span class="font-icon-setting1"></span>
                         </div>
                     </div>
                     <div class="item-noti ">

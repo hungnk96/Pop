@@ -1,10 +1,10 @@
 @font-face {
   font-family: 'popicon';
-  src:  url('fonts/popicon.eot?4xqrui');
-  src:  url('fonts/popicon.eot?4xqrui#iefix') format('embedded-opentype'),
-    url('fonts/popicon.ttf?4xqrui') format('truetype'),
-    url('fonts/popicon.woff?4xqrui') format('woff'),
-    url('fonts/popicon.svg?4xqrui#popicon') format('svg');
+  src:  url('fonts/popicon.eot?yq8tx5');
+  src:  url('fonts/popicon.eot?yq8tx5#iefix') format('embedded-opentype'),
+    url('fonts/popicon.ttf?yq8tx5') format('truetype'),
+    url('fonts/popicon.woff?yq8tx5') format('woff'),
+    url('fonts/popicon.svg?yq8tx5#popicon') format('svg');
   font-weight: normal;
   font-style: normal;
   font-display: block;
@@ -25,6 +25,9 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.font-icon-setting1:before {
+  content: "\e92f";
+}
 .font-icon-lock:before {
   content: "\e918";
 }
