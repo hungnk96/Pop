@@ -804,6 +804,7 @@ body {
 }
 .pop-btn {
   display: flex;
+  align-items: center;
   justify-content: center;
   width: calc(100%);
   background-color: var(--primary-color);
@@ -1234,6 +1235,16 @@ select {
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+.popup-login > div > div .form-login .btn-popup {
+  display: flex;
+  width: 100%;
+}
+.popup-login > div > div .form-login .btn-popup .pop-btn {
+  flex: 1;
+  width: fit-content;
+  background-color: var(--gray);
+  margin: 0 var(--margin-C) 0 0;
 }
 .popup-login > div > div .input-submit {
   width: calc(100%);
