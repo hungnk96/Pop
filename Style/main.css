@@ -791,9 +791,6 @@ body {
   font-weight: 400;
   line-height: 148%;
   color: var(--gray);
-  overflow: hidden;
-  text-overflow: ellipsis;
-  white-space: nowrap;
 }
 .menu-content .item-menu.active {
   background-color: var(--primary-color);
@@ -1193,52 +1190,52 @@ select {
 .filter > :first-child {
   margin: 0;
 }
-.popup-login > div {
+.popup-login > div > div {
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   width: var(--left-menu);
 }
-.popup-login > div > * {
+.popup-login > div > div > * {
   margin-bottom: var(--margin-I);
 }
-.popup-login > div .title-login {
+.popup-login > div > div .title-login {
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.popup-login > div .title-login .title {
+.popup-login > div > div .title-login .title {
   font-size: 20px;
   font-weight: 600;
   margin: var(--margin-I) 0 var(--margin-F) 0;
   display: flex;
   align-items: center;
 }
-.popup-login > div .title-login .title :first-child {
+.popup-login > div > div .title-login .title :first-child {
   flex: 1;
 }
-.popup-login > div .title-login .discription {
+.popup-login > div > div .title-login .discription {
   font-size: var(--font-size-input);
   display: flex;
   align-items: center;
   line-height: 148%;
   color: var(--primary-text);
 }
-.popup-login > div .tab-login {
+.popup-login > div > div .tab-login {
   display: flex;
   justify-content: center;
 }
-.popup-login > div .tab-login .active {
+.popup-login > div > div .tab-login .active {
   background-color: var(--primary-text);
 }
-.popup-login > div .form-login {
+.popup-login > div > div .form-login {
   width: calc(100% - 2*var(--margin-G));
   display: flex;
   flex-direction: column;
   align-items: center;
 }
-.popup-login > div .input-submit {
+.popup-login > div > div .input-submit {
   width: calc(100%);
   font-size: var(--font-size-A);
   background-color: var(--primary-color);
@@ -1251,12 +1248,12 @@ select {
   white-space: nowrap;
   cursor: pointer;
 }
-.popup-login > div .input-submit:hover {
+.popup-login > div > div .input-submit:hover {
   background-color: var(--primary-color-hover) !important;
   color: var(--white) !important;
   transition: var(--transition-1);
 }
-.popup-login > div .input-container {
+.popup-login > div > div .input-container {
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -1265,27 +1262,27 @@ select {
   margin-bottom: var(--margin-I);
   background-color: var(--gray-10);
 }
-.popup-login > div .input-container > div {
+.popup-login > div > div .input-container > div {
   border-bottom: var(--border-D);
 }
-.popup-login > div .input-container > *:last-child {
+.popup-login > div > div .input-container > *:last-child {
   border: none;
 }
-.popup-login > div .input {
+.popup-login > div > div .input {
   display: flex;
   align-items: center;
   padding: var(--padding-H);
 }
-.popup-login > div .input [class^="font-icon-"],
-.popup-login > div .input [class*=" font-icon-"] {
+.popup-login > div > div .input [class^="font-icon-"],
+.popup-login > div > div .input [class*=" font-icon-"] {
   font-size: var(--font-size-B);
 }
-.popup-login > div .input > div {
+.popup-login > div > div .input > div {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.popup-login > div .input > div .input-label {
+.popup-login > div > div .input > div .input-label {
   font-size: var(--font-size-input);
   display: flex;
   align-items: center;
@@ -1294,7 +1291,7 @@ select {
   margin-bottom: var(--margin-D);
   user-select: none;
 }
-.popup-login > div .input > div input {
+.popup-login > div > div .input > div input {
   flex: 1;
   font-size: var(--font-size-A);
   font-weight: 400;
@@ -1305,13 +1302,13 @@ select {
   margin: 0;
   outline: unset;
 }
-.popup-login > div .check-done > span {
+.popup-login > div > div .check-done > span {
   color: var(--air-50);
 }
-.popup-login > div .check-false > span {
+.popup-login > div > div .check-false > span {
   color: var(--air-150);
 }
-.popup-login > div .login-information {
+.popup-login > div > div .login-information {
   display: flex;
   font-size: var(--font-size-input);
   align-items: center;
@@ -1319,25 +1316,25 @@ select {
   line-height: 148%;
   color: var(--gray);
 }
-.popup-login > div .login-information .link {
+.popup-login > div > div .login-information .link {
   margin-left: var(--margin-C);
   color: var(--primary-color);
 }
-.popup-login > div .more-option {
+.popup-login > div > div .more-option {
   display: flex;
   align-items: center;
 }
-.popup-login > div .more-option .icon {
+.popup-login > div > div .more-option .icon {
   background-color: var(--gray-100);
   border-radius: var(--border-radius-X);
 }
-.popup-login > div .more-option > div {
+.popup-login > div > div .more-option > div {
   margin-left: var(--margin-F);
 }
-.popup-login > div .more-option > *:first-child {
+.popup-login > div > div .more-option > *:first-child {
   margin: 0;
 }
-.popup-login > div .login-alert {
+.popup-login > div > div .login-alert {
   padding: var(--padding-F);
   width: calc(100% - 2*var(--padding-F));
   font-size: var(--font-size-input);
@@ -1349,11 +1346,11 @@ select {
   color: var(--air-200);
   margin-bottom: var(--margin-I);
 }
-.popup-login > div .login-alert .icon-input {
+.popup-login > div > div .login-alert .icon-input {
   margin-right: var(--margin-F);
   fill: currentColor;
 }
-.popup-login > div .icon-input {
+.popup-login > div > div .icon-input {
   width: 16px;
   height: 16px;
 }
@@ -1461,6 +1458,9 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   background-color: var(--white-20);
   border-radius: var(--border-radius-D);
   margin-left: var(--margin-E);
+}
+.dropdown .icon {
+  padding: var(--padding-E);
 }
 .dropdown select {
   background-color: transparent;
@@ -1734,31 +1734,37 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   top: calc(-1*var(--margin-K));
   left: calc(-1*var(--margin-K));
 }
-.popup-overlay .popup {
+.popup-overlay .popup-container {
   width: var(--left-menu);
   background-color: var(--white);
   border-radius: var(--border-radius-E);
   padding: var(--padding-H);
   display: flex;
+  color: var(--primary-text);
+  overflow: hidden;
+}
+.popup-overlay .popup-container .popup {
+  min-width: var(--left-menu);
+  width: var(--left-menu);
+  display: flex;
   flex-direction: column;
   align-items: center;
-  color: var(--primary-text);
 }
-.popup-overlay .popup > div {
+.popup-overlay .popup-container .popup > div {
   width: calc(100% - 2*var(--margin-F));
   margin-bottom: var(--margin-I);
 }
-.popup-overlay .popup > :first-child {
+.popup-overlay .popup-container .popup > :first-child {
   margin-top: var(--margin-F);
 }
-.popup-overlay .popup > :last-child {
+.popup-overlay .popup-container .popup > :last-child {
   margin-bottom: var(--margin-F);
 }
-.popup-overlay .popup .popup-content {
+.popup-overlay .popup-container .popup .popup-content {
   display: flex;
   flex-direction: column;
 }
-.popup-overlay .popup .popup-content .item-setting {
+.popup-overlay .popup-container .popup .popup-content .item-setting {
   border: var(--border-D);
   border-radius: var(--border-radius-F);
   background-color: var(--gray-10);
@@ -1767,23 +1773,23 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   margin-top: var(--margin-F);
   display: flex;
 }
-.popup-overlay .popup .popup-content .item-setting.active {
+.popup-overlay .popup-container .popup .popup-content .item-setting.active {
   border: 1px solid var(--primary-color-50);
   background-color: var(--primary-color-10);
 }
-.popup-overlay .popup .popup-content .item-setting > span {
+.popup-overlay .popup-container .popup .popup-content .item-setting > span {
   font-size: 20px;
   color: var(--primary-color);
 }
-.popup-overlay .popup .popup-content .item-setting > :nth-child(2) {
+.popup-overlay .popup-container .popup .popup-content .item-setting > :nth-child(2) {
   margin: 0 var(--margin-K);
 }
-.popup-overlay .popup .popup-content .item-setting > div {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div {
   display: flex;
   flex-direction: column;
   flex: 1;
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-discription {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-discription {
   font-size: var(--font-size-input);
   font-weight: 400;
   display: flex;
@@ -1791,34 +1797,34 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   line-height: 148%;
   color: var(--gray);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-label {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-label {
   flex: 1;
   font-size: var(--font-size-A);
   font-weight: 500;
   line-height: var(--line-height-input-login);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select {
   display: flex;
   flex-direction: column;
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div {
   margin: var(--margin-D) 0;
   display: flex;
   align-items: center;
   padding-top: var(--padding-F);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div > span {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div > span {
   font-size: var(--font-size-input);
   font-weight: 500;
   flex: 1;
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div > div {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div > div {
   overflow: hidden;
   display: flex;
   flex: 1;
   margin-left: var(--margin-F);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div > div > div {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div > div > div {
   border-radius: var(--border-radius-X);
   flex: 1;
   font-size: var(--font-size-10);
@@ -1831,41 +1837,41 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   margin-left: var(--margin-E);
   background-color: var(--white);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div > div > div:hover {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div > div > div:hover {
   border-color: var(--primary-color);
   color: var(--primary-color);
   transition: var(--transition);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div > div .active {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div > div .active {
   border-color: var(--primary-color);
   color: var(--primary-color);
   background-color: var(--primary-color-10);
 }
-.popup-overlay .popup .popup-content .item-setting > div .item-setting-select > div > div .active:hover {
+.popup-overlay .popup-container .popup .popup-content .item-setting > div .item-setting-select > div > div .active:hover {
   border-color: var(--primary-color-hover);
   color: var(--primary-color-hover);
   transition: var(--transition);
 }
-.popup-overlay .popup .popup-content > :first-child {
+.popup-overlay .popup-container .popup .popup-content > :first-child {
   margin-top: 0;
 }
-.popup-overlay .popup .popup-header {
+.popup-overlay .popup-container .popup .popup-header {
   display: flex;
   align-items: center;
   font-size: var(--font-size-B);
   font-weight: bold;
 }
-.popup-overlay .popup .popup-header span {
+.popup-overlay .popup-container .popup .popup-header span {
   margin-right: var(--margin-F);
   font-size: 22px;
   color: var(--primary-color);
 }
-.popup-overlay .popup .popup-footer {
+.popup-overlay .popup-container .popup .popup-footer {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: var(--margin-E);
 }
-.popup-overlay .popup .popup-footer .pop-btn {
+.popup-overlay .popup-container .popup .popup-footer .pop-btn {
   margin: 0;
   width: auto;
 }
