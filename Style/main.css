@@ -1742,8 +1742,16 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   height: 100vh;
   overflow: hidden;
   position: fixed;
-  top: calc(-1*var(--margin-K));
-  left: calc(-1*var(--margin-K));
+}
+.popup-overlay input {
+  flex: 1;
+  font-size: var(--font-size-input);
+  line-height: var(--line-height-input);
+  border: none;
+  padding: 0;
+  margin: 0;
+  height: 100%;
+  outline: unset;
 }
 .popup-overlay .popup-container {
   width: var(--left-menu);
