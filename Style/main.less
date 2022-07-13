@@ -2063,6 +2063,10 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
     overflow: hidden overlay;
     height: 100%;
 }
+.login-overlay {
+    top: 0 !important;
+    left: 0 !important;
+}
 .popup-overlay {
     background-color: var(--overlay-popup);
     display: flex;
@@ -2072,8 +2076,8 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
     height: 100vh;
     overflow: hidden;
     position: fixed;
-    // top: calc(-1*var(--margin-K));
-    // left: calc(-1*var(--margin-K));
+    top: calc(-1*var(--margin-K));
+    left: calc(-1*var(--margin-K));
     input {
         flex: 1;
         font-size: var(--font-size-input);
@@ -2253,7 +2257,7 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
   }
   
   /* The slider */
-  .slider {
+  .slider-btn {
     position: absolute;
     cursor: pointer;
     top: 0;
@@ -2265,7 +2269,7 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
     transition: .4s;
   }
   
-  .slider:before {
+  .slider-btn:before {
     position: absolute;
     content: "";
     height: 16px;
@@ -2277,25 +2281,25 @@ body.dark .apexcharts-canvas .apexcharts-gridline {
     transition: .4s;
   }
   
-  input:checked + .slider {
+  input:checked + .slider-btn {
     background-color: var(--primary-color);
   }
   
-  input:focus + .slider {
+  input:focus + .slider-btn {
     box-shadow: 0 0 1px var(--primary-color);
   }
   
-  input:checked + .slider:before {
+  input:checked + .slider-btn:before {
     -webkit-transform: translateX(14px);
     -ms-transform: translateX(14px);
     transform: translateX(14px);
   }
   
   /* Rounded sliders */
-  .slider.round {
+  .slider-btn.round {
     border-radius: 34px;
   }
   
-  .slider.round:before {
+  .slider-btn.round:before {
     border-radius: 50%;
   }
